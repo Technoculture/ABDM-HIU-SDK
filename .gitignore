@@ -161,4 +161,4 @@ cython_debug/
 
 #unnecessary files
 .tox.ini
-./DS_Store
+.DS_Store
