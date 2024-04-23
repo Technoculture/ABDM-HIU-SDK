@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 #unnecessary files
-tox.ini
-.DS_Store
+.tox.ini
+./DS_Store
