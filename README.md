@@ -80,7 +80,7 @@ with abdm-hiu-sdk.ApiClient(configuration) as api_client:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://example.com*
+All URIs are relative to *https://sandbox.abdm.gov.in/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
