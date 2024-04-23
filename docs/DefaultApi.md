@@ -1,64 +1,55 @@
-# openapi_client.DefaultApi
+# abdm-hiu-sdk.DefaultAPI
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://example.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**auth_notify_v05_users_auth_notify_post**](DefaultApi.md#auth_notify_v05_users_auth_notify_post) | **POST** /v0.5/users/auth/notify | Auth Notify
-[**confirm_auth_v05_users_auth_confirm_post**](DefaultApi.md#confirm_auth_v05_users_auth_confirm_post) | **POST** /v0.5/users/auth/confirm | Confirm Auth
-[**consent_hiu_notify_v05_consents_hiu_notify_post**](DefaultApi.md#consent_hiu_notify_v05_consents_hiu_notify_post) | **POST** /v0.5/consents/hiu/notify | Consent Hiu Notify
-[**fetch_auth_modes_v05_users_auth_fetch_modes_post**](DefaultApi.md#fetch_auth_modes_v05_users_auth_fetch_modes_post) | **POST** /v0.5/users/auth/fetch-modes | Fetch Auth Modes
-[**fetch_consent_artefact_v05_consents_on_fetch_post**](DefaultApi.md#fetch_consent_artefact_v05_consents_on_fetch_post) | **POST** /v0.5/consents/on-fetch | Fetch Consent Artefact
-[**health_info_hiu_request_v05_health_information_hiu_on_request_post**](DefaultApi.md#health_info_hiu_request_v05_health_information_hiu_on_request_post) | **POST** /v0.5/health-information/hiu/on-request | Health Info Hiu Request
-[**health_info_transfer_v05_health_information_transfer_post**](DefaultApi.md#health_info_transfer_v05_health_information_transfer_post) | **POST** /v0.5/health-information/transfer | Health Info Transfer
-[**heartbeat_v05_heartbeat_get**](DefaultApi.md#heartbeat_v05_heartbeat_get) | **GET** /v0.5/heartbeat | Heartbeat
-[**init_auth_v05_users_auth_init_post**](DefaultApi.md#init_auth_v05_users_auth_init_post) | **POST** /v0.5/users/auth/init | Init Auth
-[**init_consent_request_v05_consent_requests_init_post**](DefaultApi.md#init_consent_request_v05_consent_requests_init_post) | **POST** /v0.5/consent-requests/init | Init Consent Request
-[**on_confirm_auth_v05_users_auth_on_confirm_post**](DefaultApi.md#on_confirm_auth_v05_users_auth_on_confirm_post) | **POST** /v0.5/users/auth/on-confirm | On Confirm Auth
-[**on_consent_request_status_v05_consent_requests_on_status_post**](DefaultApi.md#on_consent_request_status_v05_consent_requests_on_status_post) | **POST** /v0.5/consent-requests/on-status | On Consent Request Status
-[**on_fetch_modes_v05_users_auth_on_fetch_modes_post**](DefaultApi.md#on_fetch_modes_v05_users_auth_on_fetch_modes_post) | **POST** /v0.5/users/auth/on-fetch-modes | On Fetch Modes
-[**on_find_patient_v05_patients_on_find_post**](DefaultApi.md#on_find_patient_v05_patients_on_find_post) | **POST** /v0.5/patients/on-find | On Find Patient
-[**on_init_auth_v05_users_auth_on_init_post**](DefaultApi.md#on_init_auth_v05_users_auth_on_init_post) | **POST** /v0.5/users/auth/on-init | On Init Auth
-[**on_init_consent_request_v05_consent_requests_on_init_post**](DefaultApi.md#on_init_consent_request_v05_consent_requests_on_init_post) | **POST** /v0.5/consent-requests/on-init | On Init Consent Request
-[**on_init_subscription_v05_subscription_requests_hiu_on_init_post**](DefaultApi.md#on_init_subscription_v05_subscription_requests_hiu_on_init_post) | **POST** /v0.5/subscription-requests/hiu/on-init | On Init Subscription
-[**patient_status_notify_v05_patients_status_notify_post**](DefaultApi.md#patient_status_notify_v05_patients_status_notify_post) | **POST** /v0.5/patients/status/notify | Patient Status Notify
-[**patient_status_on_notify_v05_patients_status_on_notify_post**](DefaultApi.md#patient_status_on_notify_v05_patients_status_on_notify_post) | **POST** /v0.5/patients/status/on-notify | Patient Status On Notify
-[**subscription_hiu_notify_v05_subscriptions_hiu_notify_post**](DefaultApi.md#subscription_hiu_notify_v05_subscriptions_hiu_notify_post) | **POST** /v0.5/subscriptions/hiu/notify | Subscription Hiu Notify
-[**subscription_notify_v05_subscription_requests_hiu_notify_post**](DefaultApi.md#subscription_notify_v05_subscription_requests_hiu_notify_post) | **POST** /v0.5/subscription-requests/hiu/notify | Subscription Notify
+[**gateway_consent_request_notify**](DefaultAPI.md#gateway_consent_request_notify) | **POST** /your_gateway_callback_url_prefix/consents/hiu/notify | Notify HIU of consent changes via gateway
+[**gateway_consent_request_on_fetch**](DefaultAPI.md#gateway_consent_request_on_fetch) | **POST** /your_gateway_callback_url_prefix/consents/on-fetch | Fetch consents from gateway
+[**gateway_consent_request_on_init**](DefaultAPI.md#gateway_consent_request_on_init) | **POST** /your_gateway_callback_url_prefix/consent-requests/on-init | Handle gateway consent request initialization
+[**gateway_health_information_on_request**](DefaultAPI.md#gateway_health_information_on_request) | **POST** /your_gateway_callback_url_prefix/health-information/hiu/on-request | Handle gateway health information request
+[**generate_consent_request**](DefaultAPI.md#generate_consent_request) | **POST** /api/hiu/generate_consent_request | Generate a new consent request
+[**list_consent_artefacts**](DefaultAPI.md#list_consent_artefacts) | **GET** /api/hiu/consent_artefacts | List consent artefacts
+[**list_consents**](DefaultAPI.md#list_consents) | **GET** /api/hiu/consents | List all consents
+[**receive_health_information**](DefaultAPI.md#receive_health_information) | **POST** /api/hiu/health-information/receive | Receive health information
+[**request_health_information**](DefaultAPI.md#request_health_information) | **POST** /api/hiu/health-information/request | Request health information
+[**retrieve_consent**](DefaultAPI.md#retrieve_consent) | **GET** /api/hiu/consents/{pk} | Retrieve a specific consent
+[**retrieve_consent_artefact**](DefaultAPI.md#retrieve_consent_artefact) | **GET** /api/hiu/consent_artefacts/{pk} | Retrieve a specific consent artefact
 
 
-# **auth_notify_v05_users_auth_notify_post**
-> object auth_notify_v05_users_auth_notify_post()
+# **gateway_consent_request_notify**
+> GatewayConsentRequestNotify200ResponseModelModel gateway_consent_request_notify()
 
-Auth Notify
+Notify HIU of consent changes via gateway
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.gateway_consent_request_notify200_response_model_model import GatewayConsentRequestNotify200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
 
     try:
-        # Auth Notify
-        api_response = api_instance.auth_notify_v05_users_auth_notify_post()
-        print("The response of DefaultApi->auth_notify_v05_users_auth_notify_post:\n")
+        # Notify HIU of consent changes via gateway
+        api_response = api_instance.gateway_consent_request_notify()
+        print("The response of DefaultAPI->gateway_consent_request_notify:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->auth_notify_v05_users_auth_notify_post: %s\n" % e)
+        print("Exception when calling DefaultAPI->gateway_consent_request_notify: %s\n" % e)
 ```
 
 
@@ -69,7 +60,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**GatewayConsentRequestNotify200ResponseModelModel**](GatewayConsentRequestNotify200ResponseModel.md)
 
 ### Authorization
 
@@ -84,42 +75,43 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | HIU notified of consent change |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **confirm_auth_v05_users_auth_confirm_post**
-> object confirm_auth_v05_users_auth_confirm_post()
+# **gateway_consent_request_on_fetch**
+> GatewayConsentRequestOnFetch200ResponseModelModel gateway_consent_request_on_fetch()
 
-Confirm Auth
+Fetch consents from gateway
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.gateway_consent_request_on_fetch200_response_model_model import GatewayConsentRequestOnFetch200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
 
     try:
-        # Confirm Auth
-        api_response = api_instance.confirm_auth_v05_users_auth_confirm_post()
-        print("The response of DefaultApi->confirm_auth_v05_users_auth_confirm_post:\n")
+        # Fetch consents from gateway
+        api_response = api_instance.gateway_consent_request_on_fetch()
+        print("The response of DefaultAPI->gateway_consent_request_on_fetch:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->confirm_auth_v05_users_auth_confirm_post: %s\n" % e)
+        print("Exception when calling DefaultAPI->gateway_consent_request_on_fetch: %s\n" % e)
 ```
 
 
@@ -130,7 +122,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**GatewayConsentRequestOnFetch200ResponseModelModel**](GatewayConsentRequestOnFetch200ResponseModel.md)
 
 ### Authorization
 
@@ -145,42 +137,43 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | Consents fetched from gateway |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **consent_hiu_notify_v05_consents_hiu_notify_post**
-> object consent_hiu_notify_v05_consents_hiu_notify_post()
+# **gateway_consent_request_on_init**
+> GatewayConsentRequestOnInit200ResponseModelModel gateway_consent_request_on_init()
 
-Consent Hiu Notify
+Handle gateway consent request initialization
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.gateway_consent_request_on_init200_response_model_model import GatewayConsentRequestOnInit200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
 
     try:
-        # Consent Hiu Notify
-        api_response = api_instance.consent_hiu_notify_v05_consents_hiu_notify_post()
-        print("The response of DefaultApi->consent_hiu_notify_v05_consents_hiu_notify_post:\n")
+        # Handle gateway consent request initialization
+        api_response = api_instance.gateway_consent_request_on_init()
+        print("The response of DefaultAPI->gateway_consent_request_on_init:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->consent_hiu_notify_v05_consents_hiu_notify_post: %s\n" % e)
+        print("Exception when calling DefaultAPI->gateway_consent_request_on_init: %s\n" % e)
 ```
 
 
@@ -191,7 +184,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**GatewayConsentRequestOnInit200ResponseModelModel**](GatewayConsentRequestOnInit200ResponseModel.md)
 
 ### Authorization
 
@@ -206,42 +199,43 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | Gateway consent request initialization handled |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **fetch_auth_modes_v05_users_auth_fetch_modes_post**
-> object fetch_auth_modes_v05_users_auth_fetch_modes_post()
+# **gateway_health_information_on_request**
+> GatewayHealthInformationOnRequest200ResponseModelModel gateway_health_information_on_request()
 
-Fetch Auth Modes
+Handle gateway health information request
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.gateway_health_information_on_request200_response_model_model import GatewayHealthInformationOnRequest200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
 
     try:
-        # Fetch Auth Modes
-        api_response = api_instance.fetch_auth_modes_v05_users_auth_fetch_modes_post()
-        print("The response of DefaultApi->fetch_auth_modes_v05_users_auth_fetch_modes_post:\n")
+        # Handle gateway health information request
+        api_response = api_instance.gateway_health_information_on_request()
+        print("The response of DefaultAPI->gateway_health_information_on_request:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->fetch_auth_modes_v05_users_auth_fetch_modes_post: %s\n" % e)
+        print("Exception when calling DefaultAPI->gateway_health_information_on_request: %s\n" % e)
 ```
 
 
@@ -252,7 +246,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**GatewayHealthInformationOnRequest200ResponseModelModel**](GatewayHealthInformationOnRequest200ResponseModel.md)
 
 ### Authorization
 
@@ -267,42 +261,43 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | Gateway health information request handled |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **fetch_consent_artefact_v05_consents_on_fetch_post**
-> object fetch_consent_artefact_v05_consents_on_fetch_post()
+# **generate_consent_request**
+> GenerateConsentRequest200ResponseModelModel generate_consent_request()
 
-Fetch Consent Artefact
+Generate a new consent request
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.generate_consent_request200_response_model_model import GenerateConsentRequest200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
 
     try:
-        # Fetch Consent Artefact
-        api_response = api_instance.fetch_consent_artefact_v05_consents_on_fetch_post()
-        print("The response of DefaultApi->fetch_consent_artefact_v05_consents_on_fetch_post:\n")
+        # Generate a new consent request
+        api_response = api_instance.generate_consent_request()
+        print("The response of DefaultAPI->generate_consent_request:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->fetch_consent_artefact_v05_consents_on_fetch_post: %s\n" % e)
+        print("Exception when calling DefaultAPI->generate_consent_request: %s\n" % e)
 ```
 
 
@@ -313,7 +308,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**GenerateConsentRequest200ResponseModelModel**](GenerateConsentRequest200ResponseModel.md)
 
 ### Authorization
 
@@ -328,42 +323,43 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | Consent request successfully generated |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **health_info_hiu_request_v05_health_information_hiu_on_request_post**
-> object health_info_hiu_request_v05_health_information_hiu_on_request_post()
+# **list_consent_artefacts**
+> ListConsentArtefacts200ResponseModelModel list_consent_artefacts()
 
-Health Info Hiu Request
+List consent artefacts
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.list_consent_artefacts200_response_model_model import ListConsentArtefacts200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
 
     try:
-        # Health Info Hiu Request
-        api_response = api_instance.health_info_hiu_request_v05_health_information_hiu_on_request_post()
-        print("The response of DefaultApi->health_info_hiu_request_v05_health_information_hiu_on_request_post:\n")
+        # List consent artefacts
+        api_response = api_instance.list_consent_artefacts()
+        print("The response of DefaultAPI->list_consent_artefacts:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->health_info_hiu_request_v05_health_information_hiu_on_request_post: %s\n" % e)
+        print("Exception when calling DefaultAPI->list_consent_artefacts: %s\n" % e)
 ```
 
 
@@ -374,7 +370,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**ListConsentArtefacts200ResponseModelModel**](ListConsentArtefacts200ResponseModel.md)
 
 ### Authorization
 
@@ -389,42 +385,43 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | List of consent artefacts |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **health_info_transfer_v05_health_information_transfer_post**
-> object health_info_transfer_v05_health_information_transfer_post()
+# **list_consents**
+> ListConsents200ResponseModelModel list_consents()
 
-Health Info Transfer
+List all consents
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.list_consents200_response_model_model import ListConsents200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
 
     try:
-        # Health Info Transfer
-        api_response = api_instance.health_info_transfer_v05_health_information_transfer_post()
-        print("The response of DefaultApi->health_info_transfer_v05_health_information_transfer_post:\n")
+        # List all consents
+        api_response = api_instance.list_consents()
+        print("The response of DefaultAPI->list_consents:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->health_info_transfer_v05_health_information_transfer_post: %s\n" % e)
+        print("Exception when calling DefaultAPI->list_consents: %s\n" % e)
 ```
 
 
@@ -435,7 +432,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**ListConsents200ResponseModelModel**](ListConsents200ResponseModel.md)
 
 ### Authorization
 
@@ -450,42 +447,43 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | List of consents |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **heartbeat_v05_heartbeat_get**
-> object heartbeat_v05_heartbeat_get()
+# **receive_health_information**
+> ReceiveHealthInformation200ResponseModelModel receive_health_information()
 
-Heartbeat
+Receive health information
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.receive_health_information200_response_model_model import ReceiveHealthInformation200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
 
     try:
-        # Heartbeat
-        api_response = api_instance.heartbeat_v05_heartbeat_get()
-        print("The response of DefaultApi->heartbeat_v05_heartbeat_get:\n")
+        # Receive health information
+        api_response = api_instance.receive_health_information()
+        print("The response of DefaultAPI->receive_health_information:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->heartbeat_v05_heartbeat_get: %s\n" % e)
+        print("Exception when calling DefaultAPI->receive_health_information: %s\n" % e)
 ```
 
 
@@ -496,7 +494,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**ReceiveHealthInformation200ResponseModelModel**](ReceiveHealthInformation200ResponseModel.md)
 
 ### Authorization
 
@@ -511,42 +509,43 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | Health information received |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **init_auth_v05_users_auth_init_post**
-> object init_auth_v05_users_auth_init_post()
+# **request_health_information**
+> RequestHealthInformation200ResponseModelModel request_health_information()
 
-Init Auth
+Request health information
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.request_health_information200_response_model_model import RequestHealthInformation200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
 
     try:
-        # Init Auth
-        api_response = api_instance.init_auth_v05_users_auth_init_post()
-        print("The response of DefaultApi->init_auth_v05_users_auth_init_post:\n")
+        # Request health information
+        api_response = api_instance.request_health_information()
+        print("The response of DefaultAPI->request_health_information:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->init_auth_v05_users_auth_init_post: %s\n" % e)
+        print("Exception when calling DefaultAPI->request_health_information: %s\n" % e)
 ```
 
 
@@ -557,7 +556,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**RequestHealthInformation200ResponseModelModel**](RequestHealthInformation200ResponseModel.md)
 
 ### Authorization
 
@@ -572,53 +571,58 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | Health information request submitted |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **init_consent_request_v05_consent_requests_init_post**
-> object init_consent_request_v05_consent_requests_init_post()
+# **retrieve_consent**
+> RetrieveConsent200ResponseModelModel retrieve_consent(pk)
 
-Init Consent Request
+Retrieve a specific consent
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.retrieve_consent200_response_model_model import RetrieveConsent200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
+    pk = 56 # int | Primary key of the consent
 
     try:
-        # Init Consent Request
-        api_response = api_instance.init_consent_request_v05_consent_requests_init_post()
-        print("The response of DefaultApi->init_consent_request_v05_consent_requests_init_post:\n")
+        # Retrieve a specific consent
+        api_response = api_instance.retrieve_consent(pk)
+        print("The response of DefaultAPI->retrieve_consent:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->init_consent_request_v05_consent_requests_init_post: %s\n" % e)
+        print("Exception when calling DefaultAPI->retrieve_consent: %s\n" % e)
 ```
 
 
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pk** | **int**| Primary key of the consent | 
 
 ### Return type
 
-**object**
+[**RetrieveConsent200ResponseModelModel**](RetrieveConsent200ResponseModel.md)
 
 ### Authorization
 
@@ -633,53 +637,58 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | Consent retrieved |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **on_confirm_auth_v05_users_auth_on_confirm_post**
-> object on_confirm_auth_v05_users_auth_on_confirm_post()
+# **retrieve_consent_artefact**
+> RetrieveConsentArtefact200ResponseModelModel retrieve_consent_artefact(pk)
 
-On Confirm Auth
+Retrieve a specific consent artefact
 
 ### Example
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import abdm-hiu-sdk
+from abdm-hiu-sdk.models.retrieve_consent_artefact200_response_model_model import RetrieveConsentArtefact200ResponseModelModel
+from abdm-hiu-sdk.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
+configuration = abdm-hiu-sdk.Configuration(
+    host = "https://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with abdm-hiu-sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = abdm-hiu-sdk.DefaultAPI(api_client)
+    pk = 56 # int | Primary key of the consent artefact
 
     try:
-        # On Confirm Auth
-        api_response = api_instance.on_confirm_auth_v05_users_auth_on_confirm_post()
-        print("The response of DefaultApi->on_confirm_auth_v05_users_auth_on_confirm_post:\n")
+        # Retrieve a specific consent artefact
+        api_response = api_instance.retrieve_consent_artefact(pk)
+        print("The response of DefaultAPI->retrieve_consent_artefact:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DefaultApi->on_confirm_auth_v05_users_auth_on_confirm_post: %s\n" % e)
+        print("Exception when calling DefaultAPI->retrieve_consent_artefact: %s\n" % e)
 ```
 
 
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pk** | **int**| Primary key of the consent artefact | 
 
 ### Return type
 
-**object**
+[**RetrieveConsentArtefact200ResponseModelModel**](RetrieveConsentArtefact200ResponseModel.md)
 
 ### Authorization
 
@@ -694,617 +703,7 @@ No authorization required
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **on_consent_request_status_v05_consent_requests_on_status_post**
-> object on_consent_request_status_v05_consent_requests_on_status_post()
-
-On Consent Request Status
-
-### Example
-
-
-```python
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-
-    try:
-        # On Consent Request Status
-        api_response = api_instance.on_consent_request_status_v05_consent_requests_on_status_post()
-        print("The response of DefaultApi->on_consent_request_status_v05_consent_requests_on_status_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DefaultApi->on_consent_request_status_v05_consent_requests_on_status_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **on_fetch_modes_v05_users_auth_on_fetch_modes_post**
-> object on_fetch_modes_v05_users_auth_on_fetch_modes_post()
-
-On Fetch Modes
-
-### Example
-
-
-```python
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-
-    try:
-        # On Fetch Modes
-        api_response = api_instance.on_fetch_modes_v05_users_auth_on_fetch_modes_post()
-        print("The response of DefaultApi->on_fetch_modes_v05_users_auth_on_fetch_modes_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DefaultApi->on_fetch_modes_v05_users_auth_on_fetch_modes_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **on_find_patient_v05_patients_on_find_post**
-> object on_find_patient_v05_patients_on_find_post()
-
-On Find Patient
-
-### Example
-
-
-```python
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-
-    try:
-        # On Find Patient
-        api_response = api_instance.on_find_patient_v05_patients_on_find_post()
-        print("The response of DefaultApi->on_find_patient_v05_patients_on_find_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DefaultApi->on_find_patient_v05_patients_on_find_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **on_init_auth_v05_users_auth_on_init_post**
-> object on_init_auth_v05_users_auth_on_init_post()
-
-On Init Auth
-
-### Example
-
-
-```python
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-
-    try:
-        # On Init Auth
-        api_response = api_instance.on_init_auth_v05_users_auth_on_init_post()
-        print("The response of DefaultApi->on_init_auth_v05_users_auth_on_init_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DefaultApi->on_init_auth_v05_users_auth_on_init_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **on_init_consent_request_v05_consent_requests_on_init_post**
-> object on_init_consent_request_v05_consent_requests_on_init_post()
-
-On Init Consent Request
-
-### Example
-
-
-```python
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-
-    try:
-        # On Init Consent Request
-        api_response = api_instance.on_init_consent_request_v05_consent_requests_on_init_post()
-        print("The response of DefaultApi->on_init_consent_request_v05_consent_requests_on_init_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DefaultApi->on_init_consent_request_v05_consent_requests_on_init_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **on_init_subscription_v05_subscription_requests_hiu_on_init_post**
-> object on_init_subscription_v05_subscription_requests_hiu_on_init_post()
-
-On Init Subscription
-
-### Example
-
-
-```python
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-
-    try:
-        # On Init Subscription
-        api_response = api_instance.on_init_subscription_v05_subscription_requests_hiu_on_init_post()
-        print("The response of DefaultApi->on_init_subscription_v05_subscription_requests_hiu_on_init_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DefaultApi->on_init_subscription_v05_subscription_requests_hiu_on_init_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **patient_status_notify_v05_patients_status_notify_post**
-> object patient_status_notify_v05_patients_status_notify_post()
-
-Patient Status Notify
-
-### Example
-
-
-```python
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-
-    try:
-        # Patient Status Notify
-        api_response = api_instance.patient_status_notify_v05_patients_status_notify_post()
-        print("The response of DefaultApi->patient_status_notify_v05_patients_status_notify_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DefaultApi->patient_status_notify_v05_patients_status_notify_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **patient_status_on_notify_v05_patients_status_on_notify_post**
-> object patient_status_on_notify_v05_patients_status_on_notify_post()
-
-Patient Status On Notify
-
-### Example
-
-
-```python
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-
-    try:
-        # Patient Status On Notify
-        api_response = api_instance.patient_status_on_notify_v05_patients_status_on_notify_post()
-        print("The response of DefaultApi->patient_status_on_notify_v05_patients_status_on_notify_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DefaultApi->patient_status_on_notify_v05_patients_status_on_notify_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **subscription_hiu_notify_v05_subscriptions_hiu_notify_post**
-> object subscription_hiu_notify_v05_subscriptions_hiu_notify_post()
-
-Subscription Hiu Notify
-
-### Example
-
-
-```python
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-
-    try:
-        # Subscription Hiu Notify
-        api_response = api_instance.subscription_hiu_notify_v05_subscriptions_hiu_notify_post()
-        print("The response of DefaultApi->subscription_hiu_notify_v05_subscriptions_hiu_notify_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DefaultApi->subscription_hiu_notify_v05_subscriptions_hiu_notify_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **subscription_notify_v05_subscription_requests_hiu_notify_post**
-> object subscription_notify_v05_subscription_requests_hiu_notify_post()
-
-Subscription Notify
-
-### Example
-
-
-```python
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost"
-)
-
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-
-    try:
-        # Subscription Notify
-        api_response = api_instance.subscription_notify_v05_subscription_requests_hiu_notify_post()
-        print("The response of DefaultApi->subscription_notify_v05_subscription_requests_hiu_notify_post:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling DefaultApi->subscription_notify_v05_subscription_requests_hiu_notify_post: %s\n" % e)
-```
-
-
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | Consent artefact retrieved |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
