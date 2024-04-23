@@ -5,8 +5,8 @@ description = "HIU API SDK"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"
 readme = "README.md"
-repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
-keywords = ["OpenAPI", "OpenAPI-Generator", "HIU API SDK"]
+repository = "https://github.com/Technoculture/ABDM-HIU-SDK"
+keywords = ["ABDM", "SDK", "HIU"]
 include = ["abdm-hiu-sdk/py.typed"]
 
 [tool.poetry.dependencies]

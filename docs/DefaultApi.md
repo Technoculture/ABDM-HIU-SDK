@@ -1,6 +1,6 @@
 # abdm-hiu-sdk.DefaultAPI
 
-All URIs are relative to *https://example.com*
+All URIs are relative to *https://sandbox.abdm.gov.in/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
