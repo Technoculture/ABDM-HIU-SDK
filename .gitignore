@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 #unnecessary files
-.
+tox.ini
