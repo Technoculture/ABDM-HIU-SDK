@@ -46,7 +46,7 @@ jobs:
             run: |
               cd .
               poetry run python -m mypy .
-      test:
+    test:
         runs-on: ubuntu-latest
         needs: check
         steps: # each job consists of 1+ steps
