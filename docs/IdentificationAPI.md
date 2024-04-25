@@ -1,14 +1,14 @@
-# abdm.IdentificationAPI
+# abdm.IdentificationApi
 
 All URIs are relative to *https://dev.abdm.gov.in/gateway*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v05_patients_on_find_post**](IdentificationAPI.md#v05_patients_on_find_post) | **POST** /v0.5/patients/on-find | Identification result for a consent-manager user-id
+[**v05_patients_on_find_post**](IdentificationApi.md#v05_patients_on_find_post) | **POST** /v0.5/patients/on-find | Identification result for a consent-manager user-id
 
 
 # **v05_patients_on_find_post**
-> v05_patients_on_find_post(authorization, patient_identification_response_model)
+> v05_patients_on_find_post(authorization, patient_identification_response)
 
 Identification result for a consent-manager user-id
 
@@ -19,7 +19,7 @@ If a patient is found then patient.name contains the patients name.  Otherwise, 
 
 ```python
 import abdm
-from abdm.models.patient_identification_response_model import PatientIdentificationResponseModel
+from abdm.models.patient_identification_response import PatientIdentificationResponse
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -33,15 +33,15 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.IdentificationAPI(api_client)
+    api_instance = abdm.IdentificationApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
-    patient_identification_response_model = abdm.PatientIdentificationResponseModel() # PatientIdentificationResponseModel | 
+    patient_identification_response = abdm.PatientIdentificationResponse() # PatientIdentificationResponse | 
 
     try:
         # Identification result for a consent-manager user-id
-        api_instance.v05_patients_on_find_post(authorization, patient_identification_response_model)
+        api_instance.v05_patients_on_find_post(authorization, patient_identification_response)
     except Exception as e:
-        print("Exception when calling IdentificationAPI->v05_patients_on_find_post: %s\n" % e)
+        print("Exception when calling IdentificationApi->v05_patients_on_find_post: %s\n" % e)
 ```
 
 
@@ -52,7 +52,7 @@ with abdm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
- **patient_identification_response_model** | [**PatientIdentificationResponseModel**](PatientIdentificationResponseModel.md)|  | 
+ **patient_identification_response** | [**PatientIdentificationResponse**](PatientIdentificationResponse.md)|  | 
 
 ### Return type
 

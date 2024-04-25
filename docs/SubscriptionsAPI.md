@@ -1,16 +1,16 @@
-# abdm.SubscriptionsAPI
+# abdm.SubscriptionsApi
 
 All URIs are relative to *https://dev.abdm.gov.in/gateway*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v05_subscription_requests_hiu_notify_post**](SubscriptionsAPI.md#v05_subscription_requests_hiu_notify_post) | **POST** /v0.5/subscription-requests/hiu/notify | Notification for subscription grant/deny/revoke
-[**v05_subscription_requests_hiu_on_init_post**](SubscriptionsAPI.md#v05_subscription_requests_hiu_on_init_post) | **POST** /v0.5/subscription-requests/hiu/on-init | callback API for the /subscription-requests/cm/init to notify a HIU on acceptance/acknowledgement of the request for subscription.
-[**v05_subscriptions_hiu_notify_post**](SubscriptionsAPI.md#v05_subscriptions_hiu_notify_post) | **POST** /v0.5/subscriptions/hiu/notify | Notification to HIU on basis of a granted subscription
+[**v05_subscription_requests_hiu_notify_post**](SubscriptionsApi.md#v05_subscription_requests_hiu_notify_post) | **POST** /v0.5/subscription-requests/hiu/notify | Notification for subscription grant/deny/revoke
+[**v05_subscription_requests_hiu_on_init_post**](SubscriptionsApi.md#v05_subscription_requests_hiu_on_init_post) | **POST** /v0.5/subscription-requests/hiu/on-init | callback API for the /subscription-requests/cm/init to notify a HIU on acceptance/acknowledgement of the request for subscription.
+[**v05_subscriptions_hiu_notify_post**](SubscriptionsApi.md#v05_subscriptions_hiu_notify_post) | **POST** /v0.5/subscriptions/hiu/notify | Notification to HIU on basis of a granted subscription
 
 
 # **v05_subscription_requests_hiu_notify_post**
-> v05_subscription_requests_hiu_notify_post(authorization, x_hiu_id, subscription_approval_notification_model)
+> v05_subscription_requests_hiu_notify_post(authorization, x_hiu_id, subscription_approval_notification)
 
 Notification for subscription grant/deny/revoke
 
@@ -21,7 +21,7 @@ This API is used by CM to notify a HIU to grant or deny a request for subscripti
 
 ```python
 import abdm
-from abdm.models.subscription_approval_notification_model import SubscriptionApprovalNotificationModel
+from abdm.models.subscription_approval_notification import SubscriptionApprovalNotification
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -35,16 +35,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.SubscriptionsAPI(api_client)
+    api_instance = abdm.SubscriptionsApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    subscription_approval_notification_model = abdm.SubscriptionApprovalNotificationModel() # SubscriptionApprovalNotificationModel | 
+    subscription_approval_notification = abdm.SubscriptionApprovalNotification() # SubscriptionApprovalNotification | 
 
     try:
         # Notification for subscription grant/deny/revoke
-        api_instance.v05_subscription_requests_hiu_notify_post(authorization, x_hiu_id, subscription_approval_notification_model)
+        api_instance.v05_subscription_requests_hiu_notify_post(authorization, x_hiu_id, subscription_approval_notification)
     except Exception as e:
-        print("Exception when calling SubscriptionsAPI->v05_subscription_requests_hiu_notify_post: %s\n" % e)
+        print("Exception when calling SubscriptionsApi->v05_subscription_requests_hiu_notify_post: %s\n" % e)
 ```
 
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **subscription_approval_notification_model** | [**SubscriptionApprovalNotificationModel**](SubscriptionApprovalNotificationModel.md)|  | 
+ **subscription_approval_notification** | [**SubscriptionApprovalNotification**](SubscriptionApprovalNotification.md)|  | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_subscription_requests_hiu_on_init_post**
-> v05_subscription_requests_hiu_on_init_post(authorization, x_hiu_id, hiu_subscription_request_receipt_model)
+> v05_subscription_requests_hiu_on_init_post(authorization, x_hiu_id, hiu_subscription_request_receipt)
 
 callback API for the /subscription-requests/cm/init to notify a HIU on acceptance/acknowledgement of the request for subscription.
 
@@ -94,7 +94,7 @@ This callback API acknowledges the request for subscription from a HIU, and send
 
 ```python
 import abdm
-from abdm.models.hiu_subscription_request_receipt_model import HIUSubscriptionRequestReceiptModel
+from abdm.models.hiu_subscription_request_receipt import HIUSubscriptionRequestReceipt
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -108,16 +108,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.SubscriptionsAPI(api_client)
+    api_instance = abdm.SubscriptionsApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    hiu_subscription_request_receipt_model = abdm.HIUSubscriptionRequestReceiptModel() # HIUSubscriptionRequestReceiptModel | 
+    hiu_subscription_request_receipt = abdm.HIUSubscriptionRequestReceipt() # HIUSubscriptionRequestReceipt | 
 
     try:
         # callback API for the /subscription-requests/cm/init to notify a HIU on acceptance/acknowledgement of the request for subscription.
-        api_instance.v05_subscription_requests_hiu_on_init_post(authorization, x_hiu_id, hiu_subscription_request_receipt_model)
+        api_instance.v05_subscription_requests_hiu_on_init_post(authorization, x_hiu_id, hiu_subscription_request_receipt)
     except Exception as e:
-        print("Exception when calling SubscriptionsAPI->v05_subscription_requests_hiu_on_init_post: %s\n" % e)
+        print("Exception when calling SubscriptionsApi->v05_subscription_requests_hiu_on_init_post: %s\n" % e)
 ```
 
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **hiu_subscription_request_receipt_model** | [**HIUSubscriptionRequestReceiptModel**](HIUSubscriptionRequestReceiptModel.md)|  | 
+ **hiu_subscription_request_receipt** | [**HIUSubscriptionRequestReceipt**](HIUSubscriptionRequestReceipt.md)|  | 
 
 ### Return type
 
@@ -155,7 +155,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_subscriptions_hiu_notify_post**
-> v05_subscriptions_hiu_notify_post(authorization, x_hiu_id, hiu_subscription_notification_model)
+> v05_subscriptions_hiu_notify_post(authorization, x_hiu_id, hiu_subscription_notification)
 
 Notification to HIU on basis of a granted subscription
 
@@ -166,7 +166,7 @@ This API is used by CM to notify a HIU for notification relevant to subscription
 
 ```python
 import abdm
-from abdm.models.hiu_subscription_notification_model import HIUSubscriptionNotificationModel
+from abdm.models.hiu_subscription_notification import HIUSubscriptionNotification
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -180,16 +180,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.SubscriptionsAPI(api_client)
+    api_instance = abdm.SubscriptionsApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    hiu_subscription_notification_model = abdm.HIUSubscriptionNotificationModel() # HIUSubscriptionNotificationModel | 
+    hiu_subscription_notification = abdm.HIUSubscriptionNotification() # HIUSubscriptionNotification | 
 
     try:
         # Notification to HIU on basis of a granted subscription
-        api_instance.v05_subscriptions_hiu_notify_post(authorization, x_hiu_id, hiu_subscription_notification_model)
+        api_instance.v05_subscriptions_hiu_notify_post(authorization, x_hiu_id, hiu_subscription_notification)
     except Exception as e:
-        print("Exception when calling SubscriptionsAPI->v05_subscriptions_hiu_notify_post: %s\n" % e)
+        print("Exception when calling SubscriptionsApi->v05_subscriptions_hiu_notify_post: %s\n" % e)
 ```
 
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **hiu_subscription_notification_model** | [**HIUSubscriptionNotificationModel**](HIUSubscriptionNotificationModel.md)|  | 
+ **hiu_subscription_notification** | [**HIUSubscriptionNotification**](HIUSubscriptionNotification.md)|  | 
 
 ### Return type
 

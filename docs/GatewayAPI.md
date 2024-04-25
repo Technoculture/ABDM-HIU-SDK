@@ -1,31 +1,31 @@
-# abdm.GatewayAPI
+# abdm.GatewayApi
 
 All URIs are relative to *https://dev.abdm.gov.in/gateway*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v05_certs_get**](GatewayAPI.md#v05_certs_get) | **GET** /v0.5/certs | Get certs for JWT verification
-[**v05_consent_requests_init_post**](GatewayAPI.md#v05_consent_requests_init_post) | **POST** /v0.5/consent-requests/init | Create consent request
-[**v05_consent_requests_status_post**](GatewayAPI.md#v05_consent_requests_status_post) | **POST** /v0.5/consent-requests/status | Get consent request status
-[**v05_consents_fetch_post**](GatewayAPI.md#v05_consents_fetch_post) | **POST** /v0.5/consents/fetch | Get consent artefact
-[**v05_consents_hiu_on_notify_post**](GatewayAPI.md#v05_consents_hiu_on_notify_post) | **POST** /v0.5/consents/hiu/on-notify | Consent notification
-[**v05_health_information_cm_request_post**](GatewayAPI.md#v05_health_information_cm_request_post) | **POST** /v0.5/health-information/cm/request | Health information data request
-[**v05_health_information_notify_post**](GatewayAPI.md#v05_health_information_notify_post) | **POST** /v0.5/health-information/notify | Notifications corresponding to events during data flow
-[**v05_patients_find_post**](GatewayAPI.md#v05_patients_find_post) | **POST** /v0.5/patients/find | Identify a patient by her consent-manager user-id
-[**v05_patients_status_on_notify_post**](GatewayAPI.md#v05_patients_status_on_notify_post) | **POST** /v0.5/patients/status/on-notify | Acknowledgment by HIU
-[**v05_sessions_post**](GatewayAPI.md#v05_sessions_post) | **POST** /v0.5/sessions | Get access token
-[**v05_subscription_requests_cm_init_post**](GatewayAPI.md#v05_subscription_requests_cm_init_post) | **POST** /v0.5/subscription-requests/cm/init | Request for subscription
-[**v05_subscription_requests_hiu_on_notify_post**](GatewayAPI.md#v05_subscription_requests_hiu_on_notify_post) | **POST** /v0.5/subscription-requests/hiu/on-notify | Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
-[**v05_subscriptions_hiu_on_notify_post**](GatewayAPI.md#v05_subscriptions_hiu_on_notify_post) | **POST** /v0.5/subscriptions/hiu/on-notify | Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
-[**v05_users_auth_confirm_post**](GatewayAPI.md#v05_users_auth_confirm_post) | **POST** /v0.5/users/auth/confirm | Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-[**v05_users_auth_fetch_modes_post**](GatewayAPI.md#v05_users_auth_fetch_modes_post) | **POST** /v0.5/users/auth/fetch-modes | Get a patient&#39;s authentication modes relevant to specified purpose
-[**v05_users_auth_init_post**](GatewayAPI.md#v05_users_auth_init_post) | **POST** /v0.5/users/auth/init | Initialize authentication from HIP
-[**v05_users_auth_on_notify_post**](GatewayAPI.md#v05_users_auth_on_notify_post) | **POST** /v0.5/users/auth/on-notify | callback API by HIU/HIPs as acknowledgement of auth notification
-[**v05_well_known_openid_configuration_get**](GatewayAPI.md#v05_well_known_openid_configuration_get) | **GET** /v0.5/.well-known/openid-configuration | Get openid configuration
+[**v05_certs_get**](GatewayApi.md#v05_certs_get) | **GET** /v0.5/certs | Get certs for JWT verification
+[**v05_consent_requests_init_post**](GatewayApi.md#v05_consent_requests_init_post) | **POST** /v0.5/consent-requests/init | Create consent request
+[**v05_consent_requests_status_post**](GatewayApi.md#v05_consent_requests_status_post) | **POST** /v0.5/consent-requests/status | Get consent request status
+[**v05_consents_fetch_post**](GatewayApi.md#v05_consents_fetch_post) | **POST** /v0.5/consents/fetch | Get consent artefact
+[**v05_consents_hiu_on_notify_post**](GatewayApi.md#v05_consents_hiu_on_notify_post) | **POST** /v0.5/consents/hiu/on-notify | Consent notification
+[**v05_health_information_cm_request_post**](GatewayApi.md#v05_health_information_cm_request_post) | **POST** /v0.5/health-information/cm/request | Health information data request
+[**v05_health_information_notify_post**](GatewayApi.md#v05_health_information_notify_post) | **POST** /v0.5/health-information/notify | Notifications corresponding to events during data flow
+[**v05_patients_find_post**](GatewayApi.md#v05_patients_find_post) | **POST** /v0.5/patients/find | Identify a patient by her consent-manager user-id
+[**v05_patients_status_on_notify_post**](GatewayApi.md#v05_patients_status_on_notify_post) | **POST** /v0.5/patients/status/on-notify | Acknowledgment by HIU
+[**v05_sessions_post**](GatewayApi.md#v05_sessions_post) | **POST** /v0.5/sessions | Get access token
+[**v05_subscription_requests_cm_init_post**](GatewayApi.md#v05_subscription_requests_cm_init_post) | **POST** /v0.5/subscription-requests/cm/init | Request for subscription
+[**v05_subscription_requests_hiu_on_notify_post**](GatewayApi.md#v05_subscription_requests_hiu_on_notify_post) | **POST** /v0.5/subscription-requests/hiu/on-notify | Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
+[**v05_subscriptions_hiu_on_notify_post**](GatewayApi.md#v05_subscriptions_hiu_on_notify_post) | **POST** /v0.5/subscriptions/hiu/on-notify | Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
+[**v05_users_auth_confirm_post**](GatewayApi.md#v05_users_auth_confirm_post) | **POST** /v0.5/users/auth/confirm | Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+[**v05_users_auth_fetch_modes_post**](GatewayApi.md#v05_users_auth_fetch_modes_post) | **POST** /v0.5/users/auth/fetch-modes | Get a patient&#39;s authentication modes relevant to specified purpose
+[**v05_users_auth_init_post**](GatewayApi.md#v05_users_auth_init_post) | **POST** /v0.5/users/auth/init | Initialize authentication from HIP
+[**v05_users_auth_on_notify_post**](GatewayApi.md#v05_users_auth_on_notify_post) | **POST** /v0.5/users/auth/on-notify | callback API by HIU/HIPs as acknowledgement of auth notification
+[**v05_well_known_openid_configuration_get**](GatewayApi.md#v05_well_known_openid_configuration_get) | **GET** /v0.5/.well-known/openid-configuration | Get openid configuration
 
 
 # **v05_certs_get**
-> CertsModelModel v05_certs_get()
+> Certs v05_certs_get()
 
 Get certs for JWT verification
 
@@ -34,7 +34,7 @@ Get certs for JWT verification
 
 ```python
 import abdm
-from abdm.models.certs_model_model import CertsModelModel
+from abdm.models.certs import Certs
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -48,15 +48,15 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
 
     try:
         # Get certs for JWT verification
         api_response = api_instance.v05_certs_get()
-        print("The response of GatewayAPI->v05_certs_get:\n")
+        print("The response of GatewayApi->v05_certs_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_certs_get: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_certs_get: %s\n" % e)
 ```
 
 
@@ -67,7 +67,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CertsModelModel**](CertsModel.md)
+[**Certs**](Certs.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_consent_requests_init_post**
-> v05_consent_requests_init_post(authorization, x_cm_id, consent_request_model)
+> v05_consent_requests_init_post(authorization, x_cm_id, consent_request)
 
 Create consent request
 
@@ -100,7 +100,7 @@ Creates a consent request to get data about a patient by HIU user.
 
 ```python
 import abdm
-from abdm.models.consent_request_model import ConsentRequestModel
+from abdm.models.consent_request import ConsentRequest
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -114,16 +114,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    consent_request_model = abdm.ConsentRequestModel() # ConsentRequestModel | 
+    consent_request = abdm.ConsentRequest() # ConsentRequest | 
 
     try:
         # Create consent request
-        api_instance.v05_consent_requests_init_post(authorization, x_cm_id, consent_request_model)
+        api_instance.v05_consent_requests_init_post(authorization, x_cm_id, consent_request)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_consent_requests_init_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_consent_requests_init_post: %s\n" % e)
 ```
 
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **consent_request_model** | [**ConsentRequestModel**](ConsentRequestModel.md)|  | 
+ **consent_request** | [**ConsentRequest**](ConsentRequest.md)|  | 
 
 ### Return type
 
@@ -162,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_consent_requests_status_post**
-> v05_consent_requests_status_post(authorization, x_cm_id, consent_request_status_request_model)
+> v05_consent_requests_status_post(authorization, x_cm_id, consent_request_status_request)
 
 Get consent request status
 
@@ -173,7 +173,7 @@ Get status of consent request done previously
 
 ```python
 import abdm
-from abdm.models.consent_request_status_request_model import ConsentRequestStatusRequestModel
+from abdm.models.consent_request_status_request import ConsentRequestStatusRequest
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -187,16 +187,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    consent_request_status_request_model = abdm.ConsentRequestStatusRequestModel() # ConsentRequestStatusRequestModel | 
+    consent_request_status_request = abdm.ConsentRequestStatusRequest() # ConsentRequestStatusRequest | 
 
     try:
         # Get consent request status
-        api_instance.v05_consent_requests_status_post(authorization, x_cm_id, consent_request_status_request_model)
+        api_instance.v05_consent_requests_status_post(authorization, x_cm_id, consent_request_status_request)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_consent_requests_status_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_consent_requests_status_post: %s\n" % e)
 ```
 
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **consent_request_status_request_model** | [**ConsentRequestStatusRequestModel**](ConsentRequestStatusRequestModel.md)|  | 
+ **consent_request_status_request** | [**ConsentRequestStatusRequest**](ConsentRequestStatusRequest.md)|  | 
 
 ### Return type
 
@@ -235,7 +235,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_consents_fetch_post**
-> v05_consents_fetch_post(authorization, x_cm_id, consent_fetch_request_model)
+> v05_consents_fetch_post(authorization, x_cm_id, consent_fetch_request)
 
 Get consent artefact
 
@@ -244,7 +244,7 @@ Get consent artefact
 
 ```python
 import abdm
-from abdm.models.consent_fetch_request_model import ConsentFetchRequestModel
+from abdm.models.consent_fetch_request import ConsentFetchRequest
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -258,16 +258,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    consent_fetch_request_model = abdm.ConsentFetchRequestModel() # ConsentFetchRequestModel | 
+    consent_fetch_request = abdm.ConsentFetchRequest() # ConsentFetchRequest | 
 
     try:
         # Get consent artefact
-        api_instance.v05_consents_fetch_post(authorization, x_cm_id, consent_fetch_request_model)
+        api_instance.v05_consents_fetch_post(authorization, x_cm_id, consent_fetch_request)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_consents_fetch_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_consents_fetch_post: %s\n" % e)
 ```
 
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **consent_fetch_request_model** | [**ConsentFetchRequestModel**](ConsentFetchRequestModel.md)|  | 
+ **consent_fetch_request** | [**ConsentFetchRequest**](ConsentFetchRequest.md)|  | 
 
 ### Return type
 
@@ -306,7 +306,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_consents_hiu_on_notify_post**
-> v05_consents_hiu_on_notify_post(authorization, x_cm_id, hiu_consent_notification_response_model)
+> v05_consents_hiu_on_notify_post(authorization, x_cm_id, hiu_consent_notification_response)
 
 Consent notification
 
@@ -317,7 +317,7 @@ This API is called by HIU as acknowledgement to consent notifications, specifica
 
 ```python
 import abdm
-from abdm.models.hiu_consent_notification_response_model import HIUConsentNotificationResponseModel
+from abdm.models.hiu_consent_notification_response import HIUConsentNotificationResponse
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -331,16 +331,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    hiu_consent_notification_response_model = abdm.HIUConsentNotificationResponseModel() # HIUConsentNotificationResponseModel | 
+    hiu_consent_notification_response = abdm.HIUConsentNotificationResponse() # HIUConsentNotificationResponse | 
 
     try:
         # Consent notification
-        api_instance.v05_consents_hiu_on_notify_post(authorization, x_cm_id, hiu_consent_notification_response_model)
+        api_instance.v05_consents_hiu_on_notify_post(authorization, x_cm_id, hiu_consent_notification_response)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_consents_hiu_on_notify_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_consents_hiu_on_notify_post: %s\n" % e)
 ```
 
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **hiu_consent_notification_response_model** | [**HIUConsentNotificationResponseModel**](HIUConsentNotificationResponseModel.md)|  | 
+ **hiu_consent_notification_response** | [**HIUConsentNotificationResponse**](HIUConsentNotificationResponse.md)|  | 
 
 ### Return type
 
@@ -378,7 +378,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_health_information_cm_request_post**
-> v05_health_information_cm_request_post(authorization, x_cm_id, hi_request_model)
+> v05_health_information_cm_request_post(authorization, x_cm_id, hi_request)
 
 Health information data request
 
@@ -389,7 +389,7 @@ Request for Health information against a consent id. CM would generate a transac
 
 ```python
 import abdm
-from abdm.models.hi_request_model import HIRequestModel
+from abdm.models.hi_request import HIRequest
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -403,16 +403,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    hi_request_model = abdm.HIRequestModel() # HIRequestModel | 
+    hi_request = abdm.HIRequest() # HIRequest | 
 
     try:
         # Health information data request
-        api_instance.v05_health_information_cm_request_post(authorization, x_cm_id, hi_request_model)
+        api_instance.v05_health_information_cm_request_post(authorization, x_cm_id, hi_request)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_health_information_cm_request_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_health_information_cm_request_post: %s\n" % e)
 ```
 
 
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **hi_request_model** | [**HIRequestModel**](HIRequestModel.md)|  | 
+ **hi_request** | [**HIRequest**](HIRequest.md)|  | 
 
 ### Return type
 
@@ -451,7 +451,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_health_information_notify_post**
-> v05_health_information_notify_post(authorization, x_cm_id, health_information_notification_model)
+> v05_health_information_notify_post(authorization, x_cm_id, health_information_notification)
 
 Notifications corresponding to events during data flow
 
@@ -462,7 +462,7 @@ API called by HIU and HIP during data-transfer. 1. HIP on transfer of data would
 
 ```python
 import abdm
-from abdm.models.health_information_notification_model import HealthInformationNotificationModel
+from abdm.models.health_information_notification import HealthInformationNotification
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -476,16 +476,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    health_information_notification_model = abdm.HealthInformationNotificationModel() # HealthInformationNotificationModel | 
+    health_information_notification = abdm.HealthInformationNotification() # HealthInformationNotification | 
 
     try:
         # Notifications corresponding to events during data flow
-        api_instance.v05_health_information_notify_post(authorization, x_cm_id, health_information_notification_model)
+        api_instance.v05_health_information_notify_post(authorization, x_cm_id, health_information_notification)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_health_information_notify_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_health_information_notify_post: %s\n" % e)
 ```
 
 
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **health_information_notification_model** | [**HealthInformationNotificationModel**](HealthInformationNotificationModel.md)|  | 
+ **health_information_notification** | [**HealthInformationNotification**](HealthInformationNotification.md)|  | 
 
 ### Return type
 
@@ -524,7 +524,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_patients_find_post**
-> v05_patients_find_post(authorization, x_cm_id, patient_identification_request_model)
+> v05_patients_find_post(authorization, x_cm_id, patient_identification_request)
 
 Identify a patient by her consent-manager user-id
 
@@ -535,7 +535,7 @@ This API is meant for identify to patient given her consent-manager-user-id
 
 ```python
 import abdm
-from abdm.models.patient_identification_request_model import PatientIdentificationRequestModel
+from abdm.models.patient_identification_request import PatientIdentificationRequest
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -549,16 +549,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    patient_identification_request_model = abdm.PatientIdentificationRequestModel() # PatientIdentificationRequestModel | 
+    patient_identification_request = abdm.PatientIdentificationRequest() # PatientIdentificationRequest | 
 
     try:
         # Identify a patient by her consent-manager user-id
-        api_instance.v05_patients_find_post(authorization, x_cm_id, patient_identification_request_model)
+        api_instance.v05_patients_find_post(authorization, x_cm_id, patient_identification_request)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_patients_find_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_patients_find_post: %s\n" % e)
 ```
 
 
@@ -570,7 +570,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **patient_identification_request_model** | [**PatientIdentificationRequestModel**](PatientIdentificationRequestModel.md)|  | 
+ **patient_identification_request** | [**PatientIdentificationRequest**](PatientIdentificationRequest.md)|  | 
 
 ### Return type
 
@@ -597,7 +597,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_patients_status_on_notify_post**
-> v05_patients_status_on_notify_post(authorization, x_cm_id, patient_status_notification_model)
+> v05_patients_status_on_notify_post(authorization, x_cm_id, patient_status_notification)
 
 Acknowledgment by HIU
 
@@ -608,7 +608,7 @@ This  API is to check if the Status is successfully sent for patient (Active/Dea
 
 ```python
 import abdm
-from abdm.models.patient_status_notification_model import PatientStatusNotificationModel
+from abdm.models.patient_status_notification import PatientStatusNotification
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -622,16 +622,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    patient_status_notification_model = abdm.PatientStatusNotificationModel() # PatientStatusNotificationModel | 
+    patient_status_notification = abdm.PatientStatusNotification() # PatientStatusNotification | 
 
     try:
         # Acknowledgment by HIU
-        api_instance.v05_patients_status_on_notify_post(authorization, x_cm_id, patient_status_notification_model)
+        api_instance.v05_patients_status_on_notify_post(authorization, x_cm_id, patient_status_notification)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_patients_status_on_notify_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_patients_status_on_notify_post: %s\n" % e)
 ```
 
 
@@ -643,7 +643,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **patient_status_notification_model** | [**PatientStatusNotificationModel**](PatientStatusNotificationModel.md)|  | 
+ **patient_status_notification** | [**PatientStatusNotification**](PatientStatusNotification.md)|  | 
 
 ### Return type
 
@@ -668,7 +668,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_sessions_post**
-> SessionResponseModelModel v05_sessions_post(session_request_model)
+> SessionResponse v05_sessions_post(session_request)
 
 Get access token
 
@@ -677,8 +677,8 @@ Get access token
 
 ```python
 import abdm
-from abdm.models.session_request_model import SessionRequestModel
-from abdm.models.session_response_model_model import SessionResponseModelModel
+from abdm.models.session_request import SessionRequest
+from abdm.models.session_response import SessionResponse
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -692,16 +692,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
-    session_request_model = abdm.SessionRequestModel() # SessionRequestModel | 
+    api_instance = abdm.GatewayApi(api_client)
+    session_request = abdm.SessionRequest() # SessionRequest | 
 
     try:
         # Get access token
-        api_response = api_instance.v05_sessions_post(session_request_model)
-        print("The response of GatewayAPI->v05_sessions_post:\n")
+        api_response = api_instance.v05_sessions_post(session_request)
+        print("The response of GatewayApi->v05_sessions_post:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_sessions_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_sessions_post: %s\n" % e)
 ```
 
 
@@ -711,11 +711,11 @@ with abdm.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **session_request_model** | [**SessionRequestModel**](SessionRequestModel.md)|  | 
+ **session_request** | [**SessionRequest**](SessionRequest.md)|  | 
 
 ### Return type
 
-[**SessionResponseModelModel**](SessionResponseModel.md)
+[**SessionResponse**](SessionResponse.md)
 
 ### Authorization
 
@@ -738,7 +738,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_subscription_requests_cm_init_post**
-> v05_subscription_requests_cm_init_post(authorization, x_cm_id, subscription_request_model)
+> v05_subscription_requests_cm_init_post(authorization, x_cm_id, subscription_request)
 
 Request for subscription
 
@@ -749,7 +749,7 @@ creates a request for subscription. The subscription categories can be for care-
 
 ```python
 import abdm
-from abdm.models.subscription_request_model import SubscriptionRequestModel
+from abdm.models.subscription_request import SubscriptionRequest
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -763,16 +763,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    subscription_request_model = abdm.SubscriptionRequestModel() # SubscriptionRequestModel | 
+    subscription_request = abdm.SubscriptionRequest() # SubscriptionRequest | 
 
     try:
         # Request for subscription
-        api_instance.v05_subscription_requests_cm_init_post(authorization, x_cm_id, subscription_request_model)
+        api_instance.v05_subscription_requests_cm_init_post(authorization, x_cm_id, subscription_request)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_subscription_requests_cm_init_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_subscription_requests_cm_init_post: %s\n" % e)
 ```
 
 
@@ -784,7 +784,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **subscription_request_model** | [**SubscriptionRequestModel**](SubscriptionRequestModel.md)|  | 
+ **subscription_request** | [**SubscriptionRequest**](SubscriptionRequest.md)|  | 
 
 ### Return type
 
@@ -811,7 +811,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_subscription_requests_hiu_on_notify_post**
-> v05_subscription_requests_hiu_on_notify_post(authorization, x_cm_id, hiu_subscription_request_notification_acknowledgement_model)
+> v05_subscription_requests_hiu_on_notify_post(authorization, x_cm_id, hiu_subscription_request_notification_acknowledgement)
 
 Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
 
@@ -822,7 +822,7 @@ This API is called by HIU as acknowledgement to subscription request relevant no
 
 ```python
 import abdm
-from abdm.models.hiu_subscription_request_notification_acknowledgement_model import HIUSubscriptionRequestNotificationAcknowledgementModel
+from abdm.models.hiu_subscription_request_notification_acknowledgement import HIUSubscriptionRequestNotificationAcknowledgement
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -836,16 +836,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    hiu_subscription_request_notification_acknowledgement_model = abdm.HIUSubscriptionRequestNotificationAcknowledgementModel() # HIUSubscriptionRequestNotificationAcknowledgementModel | 
+    hiu_subscription_request_notification_acknowledgement = abdm.HIUSubscriptionRequestNotificationAcknowledgement() # HIUSubscriptionRequestNotificationAcknowledgement | 
 
     try:
         # Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
-        api_instance.v05_subscription_requests_hiu_on_notify_post(authorization, x_cm_id, hiu_subscription_request_notification_acknowledgement_model)
+        api_instance.v05_subscription_requests_hiu_on_notify_post(authorization, x_cm_id, hiu_subscription_request_notification_acknowledgement)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_subscription_requests_hiu_on_notify_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_subscription_requests_hiu_on_notify_post: %s\n" % e)
 ```
 
 
@@ -857,7 +857,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **hiu_subscription_request_notification_acknowledgement_model** | [**HIUSubscriptionRequestNotificationAcknowledgementModel**](HIUSubscriptionRequestNotificationAcknowledgementModel.md)|  | 
+ **hiu_subscription_request_notification_acknowledgement** | [**HIUSubscriptionRequestNotificationAcknowledgement**](HIUSubscriptionRequestNotificationAcknowledgement.md)|  | 
 
 ### Return type
 
@@ -883,7 +883,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_subscriptions_hiu_on_notify_post**
-> v05_subscriptions_hiu_on_notify_post(authorization, x_cm_id, hiu_subscription_notification_acknowledgment_model)
+> v05_subscriptions_hiu_on_notify_post(authorization, x_cm_id, hiu_subscription_notification_acknowledgment)
 
 Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
 
@@ -894,7 +894,7 @@ This API is called by HIU as acknowledgement to consent notifications, specifica
 
 ```python
 import abdm
-from abdm.models.hiu_subscription_notification_acknowledgment_model import HIUSubscriptionNotificationAcknowledgmentModel
+from abdm.models.hiu_subscription_notification_acknowledgment import HIUSubscriptionNotificationAcknowledgment
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -908,16 +908,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    hiu_subscription_notification_acknowledgment_model = abdm.HIUSubscriptionNotificationAcknowledgmentModel() # HIUSubscriptionNotificationAcknowledgmentModel | 
+    hiu_subscription_notification_acknowledgment = abdm.HIUSubscriptionNotificationAcknowledgment() # HIUSubscriptionNotificationAcknowledgment | 
 
     try:
         # Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
-        api_instance.v05_subscriptions_hiu_on_notify_post(authorization, x_cm_id, hiu_subscription_notification_acknowledgment_model)
+        api_instance.v05_subscriptions_hiu_on_notify_post(authorization, x_cm_id, hiu_subscription_notification_acknowledgment)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_subscriptions_hiu_on_notify_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_subscriptions_hiu_on_notify_post: %s\n" % e)
 ```
 
 
@@ -929,7 +929,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **hiu_subscription_notification_acknowledgment_model** | [**HIUSubscriptionNotificationAcknowledgmentModel**](HIUSubscriptionNotificationAcknowledgmentModel.md)|  | 
+ **hiu_subscription_notification_acknowledgment** | [**HIUSubscriptionNotificationAcknowledgment**](HIUSubscriptionNotificationAcknowledgment.md)|  | 
 
 ### Return type
 
@@ -955,7 +955,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_users_auth_confirm_post**
-> v05_users_auth_confirm_post(authorization, x_cm_id, patient_auth_confirm_request_model)
+> v05_users_auth_confirm_post(authorization, x_cm_id, patient_auth_confirm_request)
 
 Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
 
@@ -966,7 +966,7 @@ This API is called by HIP/HIUs to confirm authentication of users. The transacti
 
 ```python
 import abdm
-from abdm.models.patient_auth_confirm_request_model import PatientAuthConfirmRequestModel
+from abdm.models.patient_auth_confirm_request import PatientAuthConfirmRequest
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -980,16 +980,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    patient_auth_confirm_request_model = abdm.PatientAuthConfirmRequestModel() # PatientAuthConfirmRequestModel | 
+    patient_auth_confirm_request = abdm.PatientAuthConfirmRequest() # PatientAuthConfirmRequest | 
 
     try:
         # Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-        api_instance.v05_users_auth_confirm_post(authorization, x_cm_id, patient_auth_confirm_request_model)
+        api_instance.v05_users_auth_confirm_post(authorization, x_cm_id, patient_auth_confirm_request)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_users_auth_confirm_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_users_auth_confirm_post: %s\n" % e)
 ```
 
 
@@ -1001,7 +1001,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **patient_auth_confirm_request_model** | [**PatientAuthConfirmRequestModel**](PatientAuthConfirmRequestModel.md)|  | 
+ **patient_auth_confirm_request** | [**PatientAuthConfirmRequest**](PatientAuthConfirmRequest.md)|  | 
 
 ### Return type
 
@@ -1028,7 +1028,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_users_auth_fetch_modes_post**
-> v05_users_auth_fetch_modes_post(authorization, x_cm_id, patient_auth_mode_query_request_model)
+> v05_users_auth_fetch_modes_post(authorization, x_cm_id, patient_auth_mode_query_request)
 
 Get a patient's authentication modes relevant to specified purpose
 
@@ -1039,7 +1039,7 @@ This API is meant for identify supported authentication modes for a patient give
 
 ```python
 import abdm
-from abdm.models.patient_auth_mode_query_request_model import PatientAuthModeQueryRequestModel
+from abdm.models.patient_auth_mode_query_request import PatientAuthModeQueryRequest
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -1053,16 +1053,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    patient_auth_mode_query_request_model = abdm.PatientAuthModeQueryRequestModel() # PatientAuthModeQueryRequestModel | 
+    patient_auth_mode_query_request = abdm.PatientAuthModeQueryRequest() # PatientAuthModeQueryRequest | 
 
     try:
         # Get a patient's authentication modes relevant to specified purpose
-        api_instance.v05_users_auth_fetch_modes_post(authorization, x_cm_id, patient_auth_mode_query_request_model)
+        api_instance.v05_users_auth_fetch_modes_post(authorization, x_cm_id, patient_auth_mode_query_request)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_users_auth_fetch_modes_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_users_auth_fetch_modes_post: %s\n" % e)
 ```
 
 
@@ -1074,7 +1074,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **patient_auth_mode_query_request_model** | [**PatientAuthModeQueryRequestModel**](PatientAuthModeQueryRequestModel.md)|  | 
+ **patient_auth_mode_query_request** | [**PatientAuthModeQueryRequest**](PatientAuthModeQueryRequest.md)|  | 
 
 ### Return type
 
@@ -1101,7 +1101,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_users_auth_init_post**
-> v05_users_auth_init_post(authorization, x_cm_id, patient_auth_init_request_model)
+> v05_users_auth_init_post(authorization, x_cm_id, patient_auth_init_request)
 
 Initialize authentication from HIP
 
@@ -1112,7 +1112,7 @@ This API is called by HIPs to initiate authentication of users. A transactionId 
 
 ```python
 import abdm
-from abdm.models.patient_auth_init_request_model import PatientAuthInitRequestModel
+from abdm.models.patient_auth_init_request import PatientAuthInitRequest
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -1126,16 +1126,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    patient_auth_init_request_model = abdm.PatientAuthInitRequestModel() # PatientAuthInitRequestModel | 
+    patient_auth_init_request = abdm.PatientAuthInitRequest() # PatientAuthInitRequest | 
 
     try:
         # Initialize authentication from HIP
-        api_instance.v05_users_auth_init_post(authorization, x_cm_id, patient_auth_init_request_model)
+        api_instance.v05_users_auth_init_post(authorization, x_cm_id, patient_auth_init_request)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_users_auth_init_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_users_auth_init_post: %s\n" % e)
 ```
 
 
@@ -1147,7 +1147,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **patient_auth_init_request_model** | [**PatientAuthInitRequestModel**](PatientAuthInitRequestModel.md)|  | 
+ **patient_auth_init_request** | [**PatientAuthInitRequest**](PatientAuthInitRequest.md)|  | 
 
 ### Return type
 
@@ -1174,7 +1174,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_users_auth_on_notify_post**
-> v05_users_auth_on_notify_post(authorization, x_cm_id, patient_auth_notification_acknowledgement_model)
+> v05_users_auth_on_notify_post(authorization, x_cm_id, patient_auth_notification_acknowledgement)
 
 callback API by HIU/HIPs as acknowledgement of auth notification
 
@@ -1185,7 +1185,7 @@ This API is called by HIU/HIPs to confirm acknowledgement for receipt of auth no
 
 ```python
 import abdm
-from abdm.models.patient_auth_notification_acknowledgement_model import PatientAuthNotificationAcknowledgementModel
+from abdm.models.patient_auth_notification_acknowledgement import PatientAuthNotificationAcknowledgement
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -1199,16 +1199,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_cm_id = 'x_cm_id_example' # str | Suffix of the consent manager to which the request was intended.
-    patient_auth_notification_acknowledgement_model = abdm.PatientAuthNotificationAcknowledgementModel() # PatientAuthNotificationAcknowledgementModel | 
+    patient_auth_notification_acknowledgement = abdm.PatientAuthNotificationAcknowledgement() # PatientAuthNotificationAcknowledgement | 
 
     try:
         # callback API by HIU/HIPs as acknowledgement of auth notification
-        api_instance.v05_users_auth_on_notify_post(authorization, x_cm_id, patient_auth_notification_acknowledgement_model)
+        api_instance.v05_users_auth_on_notify_post(authorization, x_cm_id, patient_auth_notification_acknowledgement)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_users_auth_on_notify_post: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_users_auth_on_notify_post: %s\n" % e)
 ```
 
 
@@ -1220,7 +1220,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_cm_id** | **str**| Suffix of the consent manager to which the request was intended. | 
- **patient_auth_notification_acknowledgement_model** | [**PatientAuthNotificationAcknowledgementModel**](PatientAuthNotificationAcknowledgementModel.md)|  | 
+ **patient_auth_notification_acknowledgement** | [**PatientAuthNotificationAcknowledgement**](PatientAuthNotificationAcknowledgement.md)|  | 
 
 ### Return type
 
@@ -1247,7 +1247,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_well_known_openid_configuration_get**
-> OpenIdConfigurationModelModel v05_well_known_openid_configuration_get()
+> OpenIdConfiguration v05_well_known_openid_configuration_get()
 
 Get openid configuration
 
@@ -1256,7 +1256,7 @@ Get openid configuration
 
 ```python
 import abdm
-from abdm.models.open_id_configuration_model_model import OpenIdConfigurationModelModel
+from abdm.models.open_id_configuration import OpenIdConfiguration
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -1270,15 +1270,15 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.GatewayAPI(api_client)
+    api_instance = abdm.GatewayApi(api_client)
 
     try:
         # Get openid configuration
         api_response = api_instance.v05_well_known_openid_configuration_get()
-        print("The response of GatewayAPI->v05_well_known_openid_configuration_get:\n")
+        print("The response of GatewayApi->v05_well_known_openid_configuration_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling GatewayAPI->v05_well_known_openid_configuration_get: %s\n" % e)
+        print("Exception when calling GatewayApi->v05_well_known_openid_configuration_get: %s\n" % e)
 ```
 
 
@@ -1289,7 +1289,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**OpenIdConfigurationModelModel**](OpenIdConfigurationModel.md)
+[**OpenIdConfiguration**](OpenIdConfiguration.md)
 
 ### Authorization
 

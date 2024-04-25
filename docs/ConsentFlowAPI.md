@@ -1,17 +1,17 @@
-# abdm.ConsentFlowAPI
+# abdm.ConsentFlowApi
 
 All URIs are relative to *https://dev.abdm.gov.in/gateway*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v05_consent_requests_on_init_post**](ConsentFlowAPI.md#v05_consent_requests_on_init_post) | **POST** /v0.5/consent-requests/on-init | Response to consent request
-[**v05_consent_requests_on_status_post**](ConsentFlowAPI.md#v05_consent_requests_on_status_post) | **POST** /v0.5/consent-requests/on-status | Result of consent request status
-[**v05_consents_hiu_notify_post**](ConsentFlowAPI.md#v05_consents_hiu_notify_post) | **POST** /v0.5/consents/hiu/notify | Consent notification
-[**v05_consents_on_fetch_post**](ConsentFlowAPI.md#v05_consents_on_fetch_post) | **POST** /v0.5/consents/on-fetch | Result of fetch request for a consent artefact
+[**v05_consent_requests_on_init_post**](ConsentFlowApi.md#v05_consent_requests_on_init_post) | **POST** /v0.5/consent-requests/on-init | Response to consent request
+[**v05_consent_requests_on_status_post**](ConsentFlowApi.md#v05_consent_requests_on_status_post) | **POST** /v0.5/consent-requests/on-status | Result of consent request status
+[**v05_consents_hiu_notify_post**](ConsentFlowApi.md#v05_consents_hiu_notify_post) | **POST** /v0.5/consents/hiu/notify | Consent notification
+[**v05_consents_on_fetch_post**](ConsentFlowApi.md#v05_consents_on_fetch_post) | **POST** /v0.5/consents/on-fetch | Result of fetch request for a consent artefact
 
 
 # **v05_consent_requests_on_init_post**
-> v05_consent_requests_on_init_post(authorization, x_hiu_id, consent_request_init_response_model)
+> v05_consent_requests_on_init_post(authorization, x_hiu_id, consent_request_init_response)
 
 Response to consent request
 
@@ -22,7 +22,7 @@ Result of consent request creation for a patient. **id** represents the consentr
 
 ```python
 import abdm
-from abdm.models.consent_request_init_response_model import ConsentRequestInitResponseModel
+from abdm.models.consent_request_init_response import ConsentRequestInitResponse
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -36,16 +36,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.ConsentFlowAPI(api_client)
+    api_instance = abdm.ConsentFlowApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    consent_request_init_response_model = abdm.ConsentRequestInitResponseModel() # ConsentRequestInitResponseModel | 
+    consent_request_init_response = abdm.ConsentRequestInitResponse() # ConsentRequestInitResponse | 
 
     try:
         # Response to consent request
-        api_instance.v05_consent_requests_on_init_post(authorization, x_hiu_id, consent_request_init_response_model)
+        api_instance.v05_consent_requests_on_init_post(authorization, x_hiu_id, consent_request_init_response)
     except Exception as e:
-        print("Exception when calling ConsentFlowAPI->v05_consent_requests_on_init_post: %s\n" % e)
+        print("Exception when calling ConsentFlowApi->v05_consent_requests_on_init_post: %s\n" % e)
 ```
 
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **consent_request_init_response_model** | [**ConsentRequestInitResponseModel**](ConsentRequestInitResponseModel.md)|  | 
+ **consent_request_init_response** | [**ConsentRequestInitResponse**](ConsentRequestInitResponse.md)|  | 
 
 ### Return type
 
@@ -84,7 +84,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_consent_requests_on_status_post**
-> v05_consent_requests_on_status_post(authorization, x_hiu_id, hiu_consent_request_status_model)
+> v05_consent_requests_on_status_post(authorization, x_hiu_id, hiu_consent_request_status)
 
 Result of consent request status
 
@@ -95,7 +95,7 @@ Result of consent request done previously. Status of request can be GRANTED,  DE
 
 ```python
 import abdm
-from abdm.models.hiu_consent_request_status_model import HIUConsentRequestStatusModel
+from abdm.models.hiu_consent_request_status import HIUConsentRequestStatus
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -109,16 +109,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.ConsentFlowAPI(api_client)
+    api_instance = abdm.ConsentFlowApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    hiu_consent_request_status_model = abdm.HIUConsentRequestStatusModel() # HIUConsentRequestStatusModel | 
+    hiu_consent_request_status = abdm.HIUConsentRequestStatus() # HIUConsentRequestStatus | 
 
     try:
         # Result of consent request status
-        api_instance.v05_consent_requests_on_status_post(authorization, x_hiu_id, hiu_consent_request_status_model)
+        api_instance.v05_consent_requests_on_status_post(authorization, x_hiu_id, hiu_consent_request_status)
     except Exception as e:
-        print("Exception when calling ConsentFlowAPI->v05_consent_requests_on_status_post: %s\n" % e)
+        print("Exception when calling ConsentFlowApi->v05_consent_requests_on_status_post: %s\n" % e)
 ```
 
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **hiu_consent_request_status_model** | [**HIUConsentRequestStatusModel**](HIUConsentRequestStatusModel.md)|  | 
+ **hiu_consent_request_status** | [**HIUConsentRequestStatus**](HIUConsentRequestStatus.md)|  | 
 
 ### Return type
 
@@ -157,7 +157,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_consents_hiu_notify_post**
-> v05_consents_hiu_notify_post(authorization, x_hiu_id, hiu_consent_notification_event_model)
+> v05_consents_hiu_notify_post(authorization, x_hiu_id, hiu_consent_notification_event)
 
 Consent notification
 
@@ -168,7 +168,7 @@ Health information user will get notified about the consent request granted or d
 
 ```python
 import abdm
-from abdm.models.hiu_consent_notification_event_model import HIUConsentNotificationEventModel
+from abdm.models.hiu_consent_notification_event import HIUConsentNotificationEvent
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -182,16 +182,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.ConsentFlowAPI(api_client)
+    api_instance = abdm.ConsentFlowApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    hiu_consent_notification_event_model = abdm.HIUConsentNotificationEventModel() # HIUConsentNotificationEventModel | 
+    hiu_consent_notification_event = abdm.HIUConsentNotificationEvent() # HIUConsentNotificationEvent | 
 
     try:
         # Consent notification
-        api_instance.v05_consents_hiu_notify_post(authorization, x_hiu_id, hiu_consent_notification_event_model)
+        api_instance.v05_consents_hiu_notify_post(authorization, x_hiu_id, hiu_consent_notification_event)
     except Exception as e:
-        print("Exception when calling ConsentFlowAPI->v05_consents_hiu_notify_post: %s\n" % e)
+        print("Exception when calling ConsentFlowApi->v05_consents_hiu_notify_post: %s\n" % e)
 ```
 
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **hiu_consent_notification_event_model** | [**HIUConsentNotificationEventModel**](HIUConsentNotificationEventModel.md)|  | 
+ **hiu_consent_notification_event** | [**HIUConsentNotificationEvent**](HIUConsentNotificationEvent.md)|  | 
 
 ### Return type
 
@@ -229,7 +229,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_consents_on_fetch_post**
-> v05_consents_on_fetch_post(authorization, x_hiu_id, consent_artefact_response_model)
+> v05_consents_on_fetch_post(authorization, x_hiu_id, consent_artefact_response)
 
 Result of fetch request for a consent artefact
 
@@ -240,7 +240,7 @@ Must contain either consent or error. Possible reason of errors are  1. consentI
 
 ```python
 import abdm
-from abdm.models.consent_artefact_response_model import ConsentArtefactResponseModel
+from abdm.models.consent_artefact_response import ConsentArtefactResponse
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -254,16 +254,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.ConsentFlowAPI(api_client)
+    api_instance = abdm.ConsentFlowApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    consent_artefact_response_model = abdm.ConsentArtefactResponseModel() # ConsentArtefactResponseModel | 
+    consent_artefact_response = abdm.ConsentArtefactResponse() # ConsentArtefactResponse | 
 
     try:
         # Result of fetch request for a consent artefact
-        api_instance.v05_consents_on_fetch_post(authorization, x_hiu_id, consent_artefact_response_model)
+        api_instance.v05_consents_on_fetch_post(authorization, x_hiu_id, consent_artefact_response)
     except Exception as e:
-        print("Exception when calling ConsentFlowAPI->v05_consents_on_fetch_post: %s\n" % e)
+        print("Exception when calling ConsentFlowApi->v05_consents_on_fetch_post: %s\n" % e)
 ```
 
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **consent_artefact_response_model** | [**ConsentArtefactResponseModel**](ConsentArtefactResponseModel.md)|  | 
+ **consent_artefact_response** | [**ConsentArtefactResponse**](ConsentArtefactResponse.md)|  | 
 
 ### Return type
 

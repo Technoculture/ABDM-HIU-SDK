@@ -1,17 +1,17 @@
-# abdm.UserAuthAPI
+# abdm.UserAuthApi
 
 All URIs are relative to *https://dev.abdm.gov.in/gateway*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v05_users_auth_notify_post**](UserAuthAPI.md#v05_users_auth_notify_post) | **POST** /v0.5/users/auth/notify | notification API in case of DIRECT mode of authentication by the CM
-[**v05_users_auth_on_confirm_post**](UserAuthAPI.md#v05_users_auth_on_confirm_post) | **POST** /v0.5/users/auth/on-confirm | callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
-[**v05_users_auth_on_fetch_modes_post**](UserAuthAPI.md#v05_users_auth_on_fetch_modes_post) | **POST** /v0.5/users/auth/on-fetch-modes | Identification result for a consent-manager user-id
-[**v05_users_auth_on_init_post**](UserAuthAPI.md#v05_users_auth_on_init_post) | **POST** /v0.5/users/auth/on-init | Response to user authentication initialization from HIP
+[**v05_users_auth_notify_post**](UserAuthApi.md#v05_users_auth_notify_post) | **POST** /v0.5/users/auth/notify | notification API in case of DIRECT mode of authentication by the CM
+[**v05_users_auth_on_confirm_post**](UserAuthApi.md#v05_users_auth_on_confirm_post) | **POST** /v0.5/users/auth/on-confirm | callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+[**v05_users_auth_on_fetch_modes_post**](UserAuthApi.md#v05_users_auth_on_fetch_modes_post) | **POST** /v0.5/users/auth/on-fetch-modes | Identification result for a consent-manager user-id
+[**v05_users_auth_on_init_post**](UserAuthApi.md#v05_users_auth_on_init_post) | **POST** /v0.5/users/auth/on-init | Response to user authentication initialization from HIP
 
 
 # **v05_users_auth_notify_post**
-> v05_users_auth_notify_post(authorization, x_hip_id, x_hiu_id, patient_auth_notification_model)
+> v05_users_auth_notify_post(authorization, x_hip_id, x_hiu_id, patient_auth_notification)
 
 notification API in case of DIRECT mode of authentication by the CM
 
@@ -22,7 +22,7 @@ This API is called by CM to confirm authentication of users. The transactionId r
 
 ```python
 import abdm
-from abdm.models.patient_auth_notification_model import PatientAuthNotificationModel
+from abdm.models.patient_auth_notification import PatientAuthNotification
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -36,17 +36,17 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.UserAuthAPI(api_client)
+    api_instance = abdm.UserAuthApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hip_id = 'x_hip_id_example' # str | Identifier of the health information provider to which the request was intended.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    patient_auth_notification_model = abdm.PatientAuthNotificationModel() # PatientAuthNotificationModel | 
+    patient_auth_notification = abdm.PatientAuthNotification() # PatientAuthNotification | 
 
     try:
         # notification API in case of DIRECT mode of authentication by the CM
-        api_instance.v05_users_auth_notify_post(authorization, x_hip_id, x_hiu_id, patient_auth_notification_model)
+        api_instance.v05_users_auth_notify_post(authorization, x_hip_id, x_hiu_id, patient_auth_notification)
     except Exception as e:
-        print("Exception when calling UserAuthAPI->v05_users_auth_notify_post: %s\n" % e)
+        print("Exception when calling UserAuthApi->v05_users_auth_notify_post: %s\n" % e)
 ```
 
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hip_id** | **str**| Identifier of the health information provider to which the request was intended. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **patient_auth_notification_model** | [**PatientAuthNotificationModel**](PatientAuthNotificationModel.md)|  | 
+ **patient_auth_notification** | [**PatientAuthNotification**](PatientAuthNotification.md)|  | 
 
 ### Return type
 
@@ -86,7 +86,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_users_auth_on_confirm_post**
-> v05_users_auth_on_confirm_post(authorization, x_hip_id, x_hiu_id, patient_auth_confirm_response_model)
+> v05_users_auth_on_confirm_post(authorization, x_hip_id, x_hiu_id, patient_auth_confirm_response)
 
 callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
 
@@ -97,7 +97,7 @@ This API is called by CM to confirm authentication of users.    1. **auth.access
 
 ```python
 import abdm
-from abdm.models.patient_auth_confirm_response_model import PatientAuthConfirmResponseModel
+from abdm.models.patient_auth_confirm_response import PatientAuthConfirmResponse
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -111,17 +111,17 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.UserAuthAPI(api_client)
+    api_instance = abdm.UserAuthApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hip_id = 'x_hip_id_example' # str | Identifier of the health information provider to which the request was intended.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    patient_auth_confirm_response_model = abdm.PatientAuthConfirmResponseModel() # PatientAuthConfirmResponseModel | 
+    patient_auth_confirm_response = abdm.PatientAuthConfirmResponse() # PatientAuthConfirmResponse | 
 
     try:
         # callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
-        api_instance.v05_users_auth_on_confirm_post(authorization, x_hip_id, x_hiu_id, patient_auth_confirm_response_model)
+        api_instance.v05_users_auth_on_confirm_post(authorization, x_hip_id, x_hiu_id, patient_auth_confirm_response)
     except Exception as e:
-        print("Exception when calling UserAuthAPI->v05_users_auth_on_confirm_post: %s\n" % e)
+        print("Exception when calling UserAuthApi->v05_users_auth_on_confirm_post: %s\n" % e)
 ```
 
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hip_id** | **str**| Identifier of the health information provider to which the request was intended. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **patient_auth_confirm_response_model** | [**PatientAuthConfirmResponseModel**](PatientAuthConfirmResponseModel.md)|  | 
+ **patient_auth_confirm_response** | [**PatientAuthConfirmResponse**](PatientAuthConfirmResponse.md)|  | 
 
 ### Return type
 
@@ -161,7 +161,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_users_auth_on_fetch_modes_post**
-> v05_users_auth_on_fetch_modes_post(authorization, x_hip_id, x_hiu_id, patient_auth_mode_query_response_model)
+> v05_users_auth_on_fetch_modes_post(authorization, x_hip_id, x_hiu_id, patient_auth_mode_query_response)
 
 Identification result for a consent-manager user-id
 
@@ -172,7 +172,7 @@ If a patient is found then **auth** attribute contains the supported modes for t
 
 ```python
 import abdm
-from abdm.models.patient_auth_mode_query_response_model import PatientAuthModeQueryResponseModel
+from abdm.models.patient_auth_mode_query_response import PatientAuthModeQueryResponse
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -186,17 +186,17 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.UserAuthAPI(api_client)
+    api_instance = abdm.UserAuthApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hip_id = 'x_hip_id_example' # str | Identifier of the health information provider to which the request was intended.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    patient_auth_mode_query_response_model = abdm.PatientAuthModeQueryResponseModel() # PatientAuthModeQueryResponseModel | 
+    patient_auth_mode_query_response = abdm.PatientAuthModeQueryResponse() # PatientAuthModeQueryResponse | 
 
     try:
         # Identification result for a consent-manager user-id
-        api_instance.v05_users_auth_on_fetch_modes_post(authorization, x_hip_id, x_hiu_id, patient_auth_mode_query_response_model)
+        api_instance.v05_users_auth_on_fetch_modes_post(authorization, x_hip_id, x_hiu_id, patient_auth_mode_query_response)
     except Exception as e:
-        print("Exception when calling UserAuthAPI->v05_users_auth_on_fetch_modes_post: %s\n" % e)
+        print("Exception when calling UserAuthApi->v05_users_auth_on_fetch_modes_post: %s\n" % e)
 ```
 
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hip_id** | **str**| Identifier of the health information provider to which the request was intended. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **patient_auth_mode_query_response_model** | [**PatientAuthModeQueryResponseModel**](PatientAuthModeQueryResponseModel.md)|  | 
+ **patient_auth_mode_query_response** | [**PatientAuthModeQueryResponse**](PatientAuthModeQueryResponse.md)|  | 
 
 ### Return type
 
@@ -236,7 +236,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_users_auth_on_init_post**
-> v05_users_auth_on_init_post(authorization, x_hip_id, x_hiu_id, patient_auth_init_response_model)
+> v05_users_auth_on_init_post(authorization, x_hip_id, x_hiu_id, patient_auth_init_response)
 
 Response to user authentication initialization from HIP
 
@@ -247,7 +247,7 @@ If the patient's id is valid, CM will return a transactionId as initialization o
 
 ```python
 import abdm
-from abdm.models.patient_auth_init_response_model import PatientAuthInitResponseModel
+from abdm.models.patient_auth_init_response import PatientAuthInitResponse
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -261,17 +261,17 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.UserAuthAPI(api_client)
+    api_instance = abdm.UserAuthApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hip_id = 'x_hip_id_example' # str | Identifier of the health information provider to which the request was intended.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    patient_auth_init_response_model = abdm.PatientAuthInitResponseModel() # PatientAuthInitResponseModel | 
+    patient_auth_init_response = abdm.PatientAuthInitResponse() # PatientAuthInitResponse | 
 
     try:
         # Response to user authentication initialization from HIP
-        api_instance.v05_users_auth_on_init_post(authorization, x_hip_id, x_hiu_id, patient_auth_init_response_model)
+        api_instance.v05_users_auth_on_init_post(authorization, x_hip_id, x_hiu_id, patient_auth_init_response)
     except Exception as e:
-        print("Exception when calling UserAuthAPI->v05_users_auth_on_init_post: %s\n" % e)
+        print("Exception when calling UserAuthApi->v05_users_auth_on_init_post: %s\n" % e)
 ```
 
 
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hip_id** | **str**| Identifier of the health information provider to which the request was intended. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **patient_auth_init_response_model** | [**PatientAuthInitResponseModel**](PatientAuthInitResponseModel.md)|  | 
+ **patient_auth_init_response** | [**PatientAuthInitResponse**](PatientAuthInitResponse.md)|  | 
 
 ### Return type
 

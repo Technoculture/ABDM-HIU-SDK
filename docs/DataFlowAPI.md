@@ -1,15 +1,15 @@
-# abdm.DataFlowAPI
+# abdm.DataFlowApi
 
 All URIs are relative to *https://dev.abdm.gov.in/gateway*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v05_health_information_hiu_on_request_post**](DataFlowAPI.md#v05_health_information_hiu_on_request_post) | **POST** /v0.5/health-information/hiu/on-request | Health information data request
-[**v05_health_information_transfer_post**](DataFlowAPI.md#v05_health_information_transfer_post) | **POST** /v0.5/health-information/transfer | health information transfer API
+[**v05_health_information_hiu_on_request_post**](DataFlowApi.md#v05_health_information_hiu_on_request_post) | **POST** /v0.5/health-information/hiu/on-request | Health information data request
+[**v05_health_information_transfer_post**](DataFlowApi.md#v05_health_information_transfer_post) | **POST** /v0.5/health-information/transfer | health information transfer API
 
 
 # **v05_health_information_hiu_on_request_post**
-> v05_health_information_hiu_on_request_post(authorization, x_hiu_id, hiu_health_information_request_response_model)
+> v05_health_information_hiu_on_request_post(authorization, x_hiu_id, hiu_health_information_request_response)
 
 Health information data request
 
@@ -20,7 +20,7 @@ Callback API for acknowledgement of Health information request made by HIU. Gate
 
 ```python
 import abdm
-from abdm.models.hiu_health_information_request_response_model import HIUHealthInformationRequestResponseModel
+from abdm.models.hiu_health_information_request_response import HIUHealthInformationRequestResponse
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -34,16 +34,16 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.DataFlowAPI(api_client)
+    api_instance = abdm.DataFlowApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
     x_hiu_id = 'x_hiu_id_example' # str | Identifier of the health information user to which the request was intended.
-    hiu_health_information_request_response_model = abdm.HIUHealthInformationRequestResponseModel() # HIUHealthInformationRequestResponseModel | 
+    hiu_health_information_request_response = abdm.HIUHealthInformationRequestResponse() # HIUHealthInformationRequestResponse | 
 
     try:
         # Health information data request
-        api_instance.v05_health_information_hiu_on_request_post(authorization, x_hiu_id, hiu_health_information_request_response_model)
+        api_instance.v05_health_information_hiu_on_request_post(authorization, x_hiu_id, hiu_health_information_request_response)
     except Exception as e:
-        print("Exception when calling DataFlowAPI->v05_health_information_hiu_on_request_post: %s\n" % e)
+        print("Exception when calling DataFlowApi->v05_health_information_hiu_on_request_post: %s\n" % e)
 ```
 
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
  **x_hiu_id** | **str**| Identifier of the health information user to which the request was intended. | 
- **hiu_health_information_request_response_model** | [**HIUHealthInformationRequestResponseModel**](HIUHealthInformationRequestResponseModel.md)|  | 
+ **hiu_health_information_request_response** | [**HIUHealthInformationRequestResponse**](HIUHealthInformationRequestResponse.md)|  | 
 
 ### Return type
 
@@ -82,7 +82,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v05_health_information_transfer_post**
-> v05_health_information_transfer_post(authorization, data_notification_model)
+> v05_health_information_transfer_post(authorization, data_notification)
 
 health information transfer API
 
@@ -93,7 +93,7 @@ health information transfer API
 
 ```python
 import abdm
-from abdm.models.data_notification_model import DataNotificationModel
+from abdm.models.data_notification import DataNotification
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -107,15 +107,15 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.DataFlowAPI(api_client)
+    api_instance = abdm.DataFlowApi(api_client)
     authorization = 'authorization_example' # str | Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
-    data_notification_model = abdm.DataNotificationModel() # DataNotificationModel | 
+    data_notification = abdm.DataNotification() # DataNotification | 
 
     try:
         # health information transfer API
-        api_instance.v05_health_information_transfer_post(authorization, data_notification_model)
+        api_instance.v05_health_information_transfer_post(authorization, data_notification)
     except Exception as e:
-        print("Exception when calling DataFlowAPI->v05_health_information_transfer_post: %s\n" % e)
+        print("Exception when calling DataFlowApi->v05_health_information_transfer_post: %s\n" % e)
 ```
 
 
@@ -126,7 +126,7 @@ with abdm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge. | 
- **data_notification_model** | [**DataNotificationModel**](DataNotificationModel.md)|  | 
+ **data_notification** | [**DataNotification**](DataNotification.md)|  | 
 
 ### Return type
 

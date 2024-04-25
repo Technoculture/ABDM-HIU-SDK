@@ -1,14 +1,14 @@
-# abdm.MonitoringAPI
+# abdm.MonitoringApi
 
 All URIs are relative to *https://dev.abdm.gov.in/gateway*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v05_heartbeat_get**](MonitoringAPI.md#v05_heartbeat_get) | **GET** /v0.5/heartbeat | Informs about server status
+[**v05_heartbeat_get**](MonitoringApi.md#v05_heartbeat_get) | **GET** /v0.5/heartbeat | Informs about server status
 
 
 # **v05_heartbeat_get**
-> HeartbeatResponseModelModel v05_heartbeat_get()
+> HeartbeatResponse v05_heartbeat_get()
 
 Informs about server status
 
@@ -17,7 +17,7 @@ Informs about server status
 
 ```python
 import abdm
-from abdm.models.heartbeat_response_model_model import HeartbeatResponseModelModel
+from abdm.models.heartbeat_response import HeartbeatResponse
 from abdm.rest import ApiException
 from pprint import pprint
 
@@ -31,15 +31,15 @@ configuration = abdm.Configuration(
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = abdm.MonitoringAPI(api_client)
+    api_instance = abdm.MonitoringApi(api_client)
 
     try:
         # Informs about server status
         api_response = api_instance.v05_heartbeat_get()
-        print("The response of MonitoringAPI->v05_heartbeat_get:\n")
+        print("The response of MonitoringApi->v05_heartbeat_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling MonitoringAPI->v05_heartbeat_get: %s\n" % e)
+        print("Exception when calling MonitoringApi->v05_heartbeat_get: %s\n" % e)
 ```
 
 
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HeartbeatResponseModelModel**](HeartbeatResponseModel.md)
+[**HeartbeatResponse**](HeartbeatResponse.md)
 
 ### Authorization
 
