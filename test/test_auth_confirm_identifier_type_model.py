@@ -14,7 +14,6 @@ Do not edit the class manually.
 import unittest
 
 
-
 class TestAuthConfirmIdentifierTypeModel(unittest.TestCase):
     """AuthConfirmIdentifierTypeModel unit test stubs"""
 

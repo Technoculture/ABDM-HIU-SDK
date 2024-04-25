@@ -14,7 +14,6 @@ Do not edit the class manually.
 import unittest
 
 
-
 class TestConsentStatusModel(unittest.TestCase):
     """ConsentStatusModel unit test stubs"""
 

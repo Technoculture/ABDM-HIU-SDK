@@ -14,7 +14,6 @@ Do not edit the class manually.
 import unittest
 
 
-
 class TestIdentifierTypeModel(unittest.TestCase):
     """IdentifierTypeModel unit test stubs"""
 

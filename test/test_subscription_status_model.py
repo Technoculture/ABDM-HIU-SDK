@@ -14,7 +14,6 @@ Do not edit the class manually.
 import unittest
 
 
-
 class TestSubscriptionStatusModel(unittest.TestCase):
     """SubscriptionStatusModel unit test stubs"""
 
