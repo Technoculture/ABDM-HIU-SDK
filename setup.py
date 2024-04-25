@@ -36,11 +36,7 @@ setup(
     author="OpenAPI Generator community",
     author_email="team@openapitools.org",
     url="",
-    keywords=[
-        "ABDM", 
-        "SDK", 
-        "HIU"
-    ],
+    keywords=["ABDM", "SDK", "HIU"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
