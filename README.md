@@ -1,5 +1,5 @@
 # Ayushman Bharat Digital Mission: Health Information User SDK
-[![PyPI version](https://badge.fury.io/py/ABDM-HIU-SDK.svg)](https://badge.fury.io/py/ABDM-HIU-SDK)
+[![PyPI version](https://badge.fury.io/py/ABDM.svg)](https://badge.fury.io/py/ABDM)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Check and Tests](https://github.com/Technoculture/ABDM-HIU-SDK/actions/workflows/abdm.yml/badge.svg)](https://github.com/Technoculture/ABDM-HIU-SDK/actions/workflows/abdm.yml)
 
