@@ -14,7 +14,6 @@ Do not edit the class manually.
 import unittest
 
 
-
 class TestHITypeEnum(unittest.TestCase):
     """HITypeEnum unit test stubs"""
 

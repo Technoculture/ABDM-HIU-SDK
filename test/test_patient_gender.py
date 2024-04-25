@@ -14,7 +14,6 @@ Do not edit the class manually.
 import unittest
 
 
-
 class TestPatientGender(unittest.TestCase):
     """PatientGender unit test stubs"""
 

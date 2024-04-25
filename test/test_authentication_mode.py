@@ -14,7 +14,6 @@ Do not edit the class manually.
 import unittest
 
 
-
 class TestAuthenticationMode(unittest.TestCase):
     """AuthenticationMode unit test stubs"""
 

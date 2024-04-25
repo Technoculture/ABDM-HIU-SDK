@@ -14,7 +14,6 @@ Do not edit the class manually.
 import unittest
 
 
-
 class TestPatientAuthPurpose(unittest.TestCase):
     """PatientAuthPurpose unit test stubs"""
 
