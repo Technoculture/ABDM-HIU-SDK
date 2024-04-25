@@ -65,7 +65,7 @@ class DataNotificationEntriesInner(BaseModel):
 
     @field_validator("actual_instance")
     def actual_instance_must_validate_anyof(cls, v):
-        instance = DataNotificationEntriesInner.model_construct()
+        
         error_messages = []
         # validate data type: EntryContent
         if not isinstance(v, EntryContent):

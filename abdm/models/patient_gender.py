@@ -27,7 +27,7 @@ class PatientGender(str, Enum):
     """
     M = "M"
     F = "F"
-    O = "O"
+    
     U = "U"
 
     @classmethod
