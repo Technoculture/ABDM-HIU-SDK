@@ -9,4 +9,3 @@ from abdm.api.monitoring_api import MonitoringApi
 from abdm.api.patient_notification_api import PatientNotificationApi
 from abdm.api.subscriptions_api import SubscriptionsApi
 from abdm.api.user_auth_api import UserAuthApi
-
