@@ -32,14 +32,14 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="Health Repository Provider Specifications for HIU",
+    description="Python SDK for ABDM HIU REST API",
     author="OpenAPI Generator community",
     author_email="team@openapitools.org",
     url="",
     keywords=[
-        "OpenAPI",
-        "OpenAPI-Generator",
-        "Health Repository Provider Specifications for HIU",
+        "ABDM", 
+        "SDK", 
+        "HIU"
     ],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
