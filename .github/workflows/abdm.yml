@@ -3,7 +3,7 @@
 #
 # ref: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: abdm Python package
+name: Check and Tests
 
 on: [pull_request]
 
