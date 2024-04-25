@@ -13,7 +13,6 @@ Do not edit the class manually.
 
 import unittest
 
-from abdm.models.identifier_type import IdentifierType
 
 
 class TestIdentifierType(unittest.TestCase):

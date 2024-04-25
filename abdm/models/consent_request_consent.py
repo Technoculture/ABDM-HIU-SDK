@@ -30,7 +30,7 @@ from abdm.models.hi_type_enum import HITypeEnum
 from abdm.models.permission import Permission
 from abdm.models.requester import Requester
 from abdm.models.use_purpose import UsePurpose
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

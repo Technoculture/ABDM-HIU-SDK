@@ -24,7 +24,7 @@ from abdm.models.hiu_health_information_request_response_hi_request import (
     HIUHealthInformationRequestResponseHiRequest,
 )
 from abdm.models.request_reference import RequestReference
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

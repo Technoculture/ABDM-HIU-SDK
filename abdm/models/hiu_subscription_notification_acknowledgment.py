@@ -24,7 +24,7 @@ from abdm.models.hiu_subscription_notification_acknowledgment_acknowledgement im
     HIUSubscriptionNotificationAcknowledgmentAcknowledgement,
 )
 from abdm.models.request_reference import RequestReference
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

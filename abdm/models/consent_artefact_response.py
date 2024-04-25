@@ -22,7 +22,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from abdm.models.consent_artefact_response_consent import ConsentArtefactResponseConsent
 from abdm.models.error import Error
 from abdm.models.request_reference import RequestReference
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

@@ -24,7 +24,7 @@ from abdm.models.patient_auth_notification_acknowledgement_acknowledgement impor
     PatientAuthNotificationAcknowledgementAcknowledgement,
 )
 from abdm.models.request_reference import RequestReference
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

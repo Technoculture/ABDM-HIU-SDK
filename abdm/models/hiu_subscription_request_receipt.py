@@ -24,7 +24,7 @@ from abdm.models.consent_request_init_response_consent_request import (
 )
 from abdm.models.error import Error
 from abdm.models.request_reference import RequestReference
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

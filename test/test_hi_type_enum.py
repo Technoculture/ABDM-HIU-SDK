@@ -13,7 +13,6 @@ Do not edit the class manually.
 
 import unittest
 
-from abdm.models.hi_type_enum import HITypeEnum
 
 
 class TestHITypeEnum(unittest.TestCase):

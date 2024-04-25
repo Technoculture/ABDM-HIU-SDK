@@ -19,7 +19,7 @@ import json
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
 from abdm.models.certificate_or_key_get_schema import CertificateOrKeyGetSchema
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

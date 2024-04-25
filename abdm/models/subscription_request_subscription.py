@@ -23,7 +23,7 @@ from abdm.models.organization_representation import OrganizationRepresentation
 from abdm.models.subscription_category import SubscriptionCategory
 from abdm.models.subscription_period import SubscriptionPeriod
 from abdm.models.use_purpose import UsePurpose
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

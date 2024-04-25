@@ -24,7 +24,7 @@ from abdm.models.hiu_consent_request_status_consent_request import (
     HIUConsentRequestStatusConsentRequest,
 )
 from abdm.models.request_reference import RequestReference
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

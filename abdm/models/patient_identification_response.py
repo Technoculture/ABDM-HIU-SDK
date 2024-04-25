@@ -24,7 +24,7 @@ from abdm.models.patient_identification_response_patient import (
     PatientIdentificationResponsePatient,
 )
 from abdm.models.request_reference import RequestReference
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

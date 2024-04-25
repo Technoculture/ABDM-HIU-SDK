@@ -20,7 +20,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from abdm.models.hiu_subscription import HIUSubscription
 from abdm.models.subscription_status import SubscriptionStatus
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

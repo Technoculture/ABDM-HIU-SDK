@@ -13,7 +13,6 @@ Do not edit the class manually.
 
 import unittest
 
-from abdm.models.subscription_category import SubscriptionCategory
 
 
 class TestSubscriptionCategory(unittest.TestCase):

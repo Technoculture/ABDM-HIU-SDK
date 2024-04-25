@@ -20,7 +20,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from abdm.models.consent_artefact_reference import ConsentArtefactReference
 from abdm.models.consent_status import ConsentStatus
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

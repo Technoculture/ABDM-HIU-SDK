@@ -21,7 +21,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from abdm.models.health_information_notification_notification_status_notification_status_responses_inner import (
     HealthInformationNotificationNotificationStatusNotificationStatusResponsesInner,
 )
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

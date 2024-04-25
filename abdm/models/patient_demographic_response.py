@@ -21,7 +21,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from abdm.models.identifier import Identifier
 from abdm.models.patient_address import PatientAddress
 from abdm.models.patient_gender import PatientGender
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

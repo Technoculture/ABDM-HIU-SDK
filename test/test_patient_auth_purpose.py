@@ -13,7 +13,6 @@ Do not edit the class manually.
 
 import unittest
 
-from abdm.models.patient_auth_purpose import PatientAuthPurpose
 
 
 class TestPatientAuthPurpose(unittest.TestCase):

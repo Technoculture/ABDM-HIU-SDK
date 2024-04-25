@@ -20,7 +20,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from abdm.models.auth_confirm_identifier import AuthConfirmIdentifier
 from abdm.models.patient_gender import PatientGender
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

@@ -23,7 +23,7 @@ from abdm.models.patient_auth_init_request_query_requester import (
     PatientAuthInitRequestQueryRequester,
 )
 from abdm.models.patient_auth_purpose import PatientAuthPurpose
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

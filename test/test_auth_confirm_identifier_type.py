@@ -13,7 +13,6 @@ Do not edit the class manually.
 
 import unittest
 
-from abdm.models.auth_confirm_identifier_type import AuthConfirmIdentifierType
 
 
 class TestAuthConfirmIdentifierType(unittest.TestCase):

@@ -22,7 +22,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from abdm.models.error import Error
 from abdm.models.patient_auth_init_response_auth import PatientAuthInitResponseAuth
 from abdm.models.request_reference import RequestReference
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

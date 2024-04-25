@@ -20,7 +20,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from abdm.models.access_token_validity import AccessTokenValidity
 from abdm.models.patient_demographic_response import PatientDemographicResponse
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 

@@ -13,7 +13,6 @@ Do not edit the class manually.
 
 import unittest
 
-from abdm.models.subscription_status import SubscriptionStatus
 
 
 class TestSubscriptionStatus(unittest.TestCase):

@@ -21,7 +21,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from abdm.models.organization_representation import OrganizationRepresentation
 from abdm.models.subscription_category import SubscriptionCategory
 from abdm.models.subscription_period import SubscriptionPeriod
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 
