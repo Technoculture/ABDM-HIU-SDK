@@ -13,7 +13,6 @@ Do not edit the class manually.
 
 import unittest
 
-from abdm.abdm.model.patient_gender_model import PatientGenderModel
 
 
 class TestPatientGenderModel(unittest.TestCase):

@@ -13,7 +13,6 @@ Do not edit the class manually.
 
 import unittest
 
-from abdm.abdm.model.consent_status_model import ConsentStatusModel
 
 
 class TestConsentStatusModel(unittest.TestCase):

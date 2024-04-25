@@ -13,7 +13,6 @@ Do not edit the class manually.
 
 import unittest
 
-from abdm.abdm.model.authentication_mode_model import AuthenticationModeModel
 
 
 class TestAuthenticationModeModel(unittest.TestCase):
