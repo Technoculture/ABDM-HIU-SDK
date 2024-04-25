@@ -60,7 +60,6 @@ Execute `pytest` to run the tests.
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
-
 import abdm
 from abdm.rest import ApiException
 from pprint import pprint
@@ -70,8 +69,6 @@ from pprint import pprint
 configuration = abdm.Configuration(
     host = "https://dev.abdm.gov.in/gateway"
 )
-
-
 
 # Enter a context with an instance of the API client
 with abdm.ApiClient(configuration) as api_client:
@@ -85,7 +82,6 @@ with abdm.ApiClient(configuration) as api_client:
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling GatewayApi->v05_certs_get: %s\n" % e)
-
 ```
 
 ## Documentation for API Endpoints
