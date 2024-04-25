@@ -44,7 +44,7 @@ jobs:
     
           - name: Type check
             run: |
-              cd .
+              cd abdm
               poetry run python -m mypy .
     test:
         runs-on: ubuntu-latest
